@@ -148,6 +148,68 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/08/18/ubuntu-%E5%8F%AA%E4%BF%9D%E7%95%99%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E7%9A%84%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ice">
+      <meta itemprop="description" content="安静地坐着学习">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/18/ubuntu-%E5%8F%AA%E4%BF%9D%E7%95%99%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E7%9A%84%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">ubuntu 只保留最近一周的日志</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-08-18 15:32:38 / Modified: 15:32:56" itemprop="dateCreated datePublished" datetime="2023-08-18T15:32:38+08:00">2023-08-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="只保留最近一周的日志"><a href="#只保留最近一周的日志" class="headerlink" title="只保留最近一周的日志"></a>只保留最近一周的日志</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">journalctl --vacuum-time=1w</span><br></pre></td></tr></table></figure>
+<ul>
+<li>只保留最多500M日志<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">journalctl --vacuum-size=500M</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/08/18/ubuntu-%E6%97%B6%E9%92%9F%E6%98%BE%E7%A4%BA%E7%A7%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -862,78 +924,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_00_common_collections/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/18/rust_docs/ch_08_00_common_collections/" class="post-title-link" itemprop="url">Ch 08.00:常见集合</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-05-18 10:30:00" itemprop="dateCreated datePublished" datetime="2023-05-18T10:30:00+08:00">2023-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-18 11:03:22" itemprop="dateModified" datetime="2023-08-18T11:03:22+08:00">2023-08-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="常见集合"><a href="#常见集合" class="headerlink" title="常见集合"></a>常见集合</h2><p>Rust标准库中包含一些非常有用的数据结构叫做结合(collections).大多数其他的数据类型代表一个特殊的值，但是集合可以包含多个值。不像内建的数组和元组类型，这些集合数据指向堆，意味着在编译时不需要知道数据量，并且可以随着程序运行而增加或减少。每一种集合有不同的性能和消耗，并且选择一个合适的集合，对你当前的情景是需要你慢慢学习的技巧。在本章，我们将会讨论三个集合，它们在Rust编程中很常用：</p>
-<ul>
-<li>vector 允许你一个挨着一个地存储一系列数量的可变的值</li>
-<li>string 是一个字符类型的集合。我们之前已经提到过<code>String</code>类型，但是在本章，我们将更加深入地讨论它。</li>
-<li>hash map 允许你用一个特定的key关联一个值(value)，它是成为映射的更通用数据结构的一种实现。</li>
-</ul>
-<p>要学习标准库提供的其他类型的集合，请查看文档<a target="_blank" rel="noopener" href="https://doc.rust-lang.org/std/collections/index.html">std::collections</a></p>
-<p>我们将要讨论如何创建和更新vectors, strings，和hash map，以及他们每个类型的独特之处。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1003,7 +993,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
