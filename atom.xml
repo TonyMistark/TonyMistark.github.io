@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-08-22T02:03:39.330Z</updated>
+  <updated>2023-08-29T06:50:26.330Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ubuntu20.04/ubuntu22.04 安装，环境配置遇到的问题以及解决方案</title>
+    <link href="https://tonymistark.github.io/2023/08/29/ubuntu20-04-ubuntu22-04-%E5%AE%89%E8%A3%85%EF%BC%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://tonymistark.github.io/2023/08/29/ubuntu20-04-ubuntu22-04-%E5%AE%89%E8%A3%85%EF%BC%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2023-08-29T06:48:08.000Z</published>
+    <updated>2023-08-29T06:50:26.330Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;build-a-python-env-on-ubuntu20-04&quot;&gt;&lt;a href=&quot;#build-a-python-env-on-ubuntu20-04&quot; class=&quot;headerlink&quot; title=&quot;build a python env on</summary>
+        
+      
+    
+    
+    
+    <category term="ubuntu" scheme="https://tonymistark.github.io/categories/ubuntu/"/>
+    
+    
+    <category term="ubuntu" scheme="https://tonymistark.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>人在什么情况下成长最快？</title>
     <link href="https://tonymistark.github.io/2023/08/21/%E4%BA%BA%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E6%88%90%E9%95%BF%E6%9C%80%E5%BF%AB%EF%BC%9F/"/>
     <id>https://tonymistark.github.io/2023/08/21/%E4%BA%BA%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E6%88%90%E9%95%BF%E6%9C%80%E5%BF%AB%EF%BC%9F/</id>
     <published>2023-08-21T13:38:17.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
+    <updated>2023-08-25T08:35:14.591Z</updated>
     
     
       
@@ -473,31 +498,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;使用包、Crate和模块管理不断增长的项目&quot;&gt;&lt;a href=&quot;#使用包、Crate和模块管理不断增长的项目&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 06.03:总结</title>
-    <link href="https://tonymistark.github.io/2023/05/16/rust_docs/ch_06_03_if_let/"/>
-    <id>https://tonymistark.github.io/2023/05/16/rust_docs/ch_06_03_if_let/</id>
-    <published>2023-05-16T02:18:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot;</summary>
         
       
     
