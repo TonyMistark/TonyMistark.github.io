@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"tonymistark.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="隐藏(Shadowing)如你在第二章猜数字游戏教程所见，你可以声明一个新的变量用和前面声明的变量同样的名字。Rustaceans说第一个变量被第二个隐藏(Shadowing)了，意思是第二个变量的值是在程序使用时才看到的。我们可以shadow一个变量使用相同的变量名，并重复地使用let关键字，如下： src&#x2F;main.rs 123456789101112fn main() &amp;#123;">
+  <meta name="description" content="人生南北多歧路,君向潇湘我向秦这两句诗道尽初遇时的情投意合，最终却南辕北辙，遗憾分开的悲伤结局，有很多人可能并不知道这是被裁缝到一起的。人生南北多歧路清代吴敬梓的《儒林外史》的一首词《秦时月》 《秦时月》：人生南北多歧路。将相神仙，也要凡人做。百代兴亡朝复暮，江风吹倒前朝树。功名富贵无凭据。费尽心情，总把流光误。浊酒三杯沉醉去，水流花谢知何处。 而后一句“君向潇湘我向秦”出自唐代诗人郑谷的《淮上与">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ch 03.01:隐藏(Shadowing)">
-<meta property="og:url" content="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_01_variables_and_mutability/index.html">
+<meta property="og:title" content="人生南北多歧路,君向潇湘我向秦">
+<meta property="og:url" content="https://tonymistark.github.io/2023/08/25/%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="隐藏(Shadowing)如你在第二章猜数字游戏教程所见，你可以声明一个新的变量用和前面声明的变量同样的名字。Rustaceans说第一个变量被第二个隐藏(Shadowing)了，意思是第二个变量的值是在程序使用时才看到的。我们可以shadow一个变量使用相同的变量名，并重复地使用let关键字，如下： src&#x2F;main.rs 123456789101112fn main() &amp;#123;">
+<meta property="og:description" content="人生南北多歧路,君向潇湘我向秦这两句诗道尽初遇时的情投意合，最终却南辕北辙，遗憾分开的悲伤结局，有很多人可能并不知道这是被裁缝到一起的。人生南北多歧路清代吴敬梓的《儒林外史》的一首词《秦时月》 《秦时月》：人生南北多歧路。将相神仙，也要凡人做。百代兴亡朝复暮，江风吹倒前朝树。功名富贵无凭据。费尽心情，总把流光误。浊酒三杯沉醉去，水流花谢知何处。 而后一句“君向潇湘我向秦”出自唐代诗人郑谷的《淮上与">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-29T06:47:00.000Z">
-<meta property="article:modified_time" content="2023-08-22T02:03:39.330Z">
+<meta property="article:published_time" content="2023-08-25T00:53:24.000Z">
+<meta property="article:modified_time" content="2023-08-31T02:30:41.556Z">
 <meta property="article:author" content="Ice">
-<meta property="article:tag" content="Rust">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_01_variables_and_mutability/">
+<link rel="canonical" href="https://tonymistark.github.io/2023/08/25/%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Ch 03.01:隐藏(Shadowing) | BLOG</title>
+  <title>人生南北多歧路,君向潇湘我向秦 | BLOG</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_01_variables_and_mutability/">
+    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/08/25/%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Ch 03.01:隐藏(Shadowing)
+          人生南北多歧路,君向潇湘我向秦
         </h1>
 
         <div class="post-meta">
@@ -192,14 +192,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-12-29 14:47:00" itemprop="dateCreated datePublished" datetime="2022-12-29T14:47:00+08:00">2022-12-29</time>
+              <time title="Created: 2023-08-25 08:53:24" itemprop="dateCreated datePublished" datetime="2023-08-25T08:53:24+08:00">2023-08-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
+                <time title="Modified: 2023-08-31 10:30:41" itemprop="dateModified" datetime="2023-08-31T10:30:41+08:00">2023-08-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -207,7 +207,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
                 </span>
             </span>
 
@@ -217,14 +217,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>623</span>
+              <span>270</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -236,24 +236,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="隐藏-Shadowing"><a href="#隐藏-Shadowing" class="headerlink" title="隐藏(Shadowing)"></a>隐藏(Shadowing)</h5><p>如你在第二章猜数字游戏教程所见，你可以声明一个新的变量用和前面声明的变量同样的名字。Rustaceans说第一个变量被第二个隐藏(Shadowing)了，意思是第二个变量的值是在程序使用时才看到的。我们可以shadow一个变量使用相同的变量名，并重复地使用let关键字，如下：</p>
-<p>src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = x + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">x</span> = x * <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;The value of x in the inner scope is: &#123;&#125;&quot;</span>, x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The value of x is: &#123;&#125;&quot;</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>程序首先绑定了5给x。然后重新用let x&#x3D;隐藏了x，使得原来的值加1，所以变量的值变为了6。然后，在内部作用域，第三次let声明x, 将之前的值乘以2得到12。当内部作用结束，内部的隐藏结束，并且x变回6。当我们运行这个程序，它运行结果如下：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> cargo run</span><br><span class="line">   Compiling variables v0.<span class="number">1.0</span> (file:///projects/variables)</span><br><span class="line">    Finished dev <span class="function">[<span class="type">unoptimized</span> + <span class="type">debuginfo</span>] <span class="title">target</span></span>(s) <span class="keyword">in</span> <span class="number">0.31</span>s</span><br><span class="line">     Running `target/debug/variables`</span><br><span class="line">The value of x <span class="keyword">in</span> the inner scope is: <span class="number">12</span></span><br><span class="line">The value of x is: <span class="number">6</span></span><br></pre></td></tr></table></figure>
-
-<p>隐藏不同于将变量标记为mut，因为如果我们意外地尝试重新分配这个变量不使用let关键字，我们会得到一个编译错误。通过使用let，我们可以对一个值执行一些转换，但在这些转换完成后，变量是不可变的。</p>
-<p>其他的mut和shadowing之间的不同之处是因为当我们再次使用let关键字，我们实际上创建了一个新的变量。例如，假如我们的程序要求用户输入空格来显示文本之间需要多少空格，然后我们希望将输入存储为数字：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">spaces</span> = <span class="string">&quot;   &quot;</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">spaces</span> = spaces.<span class="title function_ invoke__">len</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先spaces变量是一个string类型，然后第二个spaces变量是数字类型。因此shadowing使我们不需使用不同的变量名，如space_str 和 space_num；然而，如果我们尝试使用mut，如下，我们会得到一个编译时错误：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">spaces</span> = <span class="string">&quot;   &quot;</span>;</span><br><span class="line">    spaces = spaces.<span class="title function_ invoke__">len</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>错误说我们不被允许转变变量的类型：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cargo run</span><br><span class="line">   Compiling variables v0.<span class="number">1.0</span> (file:<span class="comment">///projects/variables)</span></span><br><span class="line">error[E0308]: mismatched types</span><br><span class="line"> -<span class="punctuation">-&gt;</span> src/main.rs:<span class="number">3</span>:<span class="number">14</span></span><br><span class="line">  |</span><br><span class="line"><span class="number">3</span> |     spaces = spaces.<span class="title function_ invoke__">len</span>();</span><br><span class="line">  |              ^^^^^^^^^^^^ expected `&amp;<span class="type">str</span>`, found `<span class="type">usize</span>`</span><br><span class="line"></span><br><span class="line">For more information about this error, <span class="keyword">try</span> `rustc --explain E0308`.</span><br><span class="line">error: could not compile `variables` due to previous error</span><br></pre></td></tr></table></figure>
-
-<p>现在，我们探索了变量是如何工作的，我们还有更多的数据类型等着你呢！</p>
+        <h3 id="人生南北多歧路-君向潇湘我向秦"><a href="#人生南北多歧路-君向潇湘我向秦" class="headerlink" title="人生南北多歧路,君向潇湘我向秦"></a>人生南北多歧路,君向潇湘我向秦</h3><p>这两句诗道尽初遇时的情投意合，最终却南辕北辙，遗憾分开的悲伤结局，有很多人可能并不知道这是被裁缝到一起的。<br>人生南北多歧路清代吴敬梓的《儒林外史》的一首词《秦时月》</p>
+<p>《秦时月》：<br>人生南北多歧路。<br>将相神仙，也要凡人做。<br>百代兴亡朝复暮，<br>江风吹倒前朝树。<br>功名富贵无凭据。<br>费尽心情，总把流光误。<br>浊酒三杯沉醉去，<br>水流花谢知何处。</p>
+<p>而后一句“君向潇湘我向秦”出自唐代诗人郑谷的《淮上与友人别》<br>《淮上与友人别》<br>郑谷<br>扬子江头杨柳春，杨花愁杀渡江人。<br>数声风笛离亭晚，君向潇湘我向秦。</p>
+<p>扬子江边杨柳青青春意正浓，漫天飞扬的杨花使渡江之人非常的愁烦。<br>微风轻拂，笛声幽咽，离亭渐渐染上暮色，你就要南下潇湘我却奔向西秦。</p>
 
     </div>
 
@@ -292,7 +278,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Rust/" rel="tag"># Rust</a>
+              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
           </div>
 
         
@@ -301,12 +287,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/12/29/rust_docs/ch_03_00_common_programming_concepts/" rel="prev" title="Ch 03.00:关键字(Keywords)">
-      <i class="fa fa-chevron-left"></i> Ch 03.00:关键字(Keywords)
+    <a href="/2023/08/21/%E4%BA%BA%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E6%88%90%E9%95%BF%E6%9C%80%E5%BF%AB%EF%BC%9F/" rel="prev" title="人在什么情况下成长最快？">
+      <i class="fa fa-chevron-left"></i> 人在什么情况下成长最快？
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/12/29/rust_docs/ch_03_02_data_types/" rel="next" title="Ch 03.02:无效的数组元素访问">
-      Ch 03.02:无效的数组元素访问 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/08/29/ubuntu20-04-ubuntu22-04-%E5%AE%89%E8%A3%85%EF%BC%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="next" title="ubuntu20.04/ubuntu22.04 安装，环境配置遇到的问题以及解决方案">
+      ubuntu20.04/ubuntu22.04 安装，环境配置遇到的问题以及解决方案 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -366,7 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%90%E8%97%8F-Shadowing"><span class="nav-number">1.</span> <span class="nav-text">隐藏(Shadowing)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6"><span class="nav-number">1.</span> <span class="nav-text">人生南北多歧路,君向潇湘我向秦</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

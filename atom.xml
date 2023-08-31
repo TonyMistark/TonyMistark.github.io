@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-08-29T06:50:26.330Z</updated>
+  <updated>2023-08-31T02:30:41.556Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谈日本向海洋排放核污染水</title>
+    <link href="https://tonymistark.github.io/2023/08/29/%E8%B0%88%E6%97%A5%E6%9C%AC%E5%90%91%E6%B5%B7%E6%B4%8B%E6%8E%92%E6%A0%B8%E6%B1%A1%E6%9F%93%E6%B0%B4/"/>
+    <id>https://tonymistark.github.io/2023/08/29/%E8%B0%88%E6%97%A5%E6%9C%AC%E5%90%91%E6%B5%B7%E6%B4%8B%E6%8E%92%E6%A0%B8%E6%B1%A1%E6%9F%93%E6%B0%B4/</id>
+    <published>2023-08-29T12:03:24.000Z</published>
+    <updated>2023-08-31T02:30:41.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;谈日本向海洋排放核核污染水&quot;&gt;&lt;a href=&quot;#谈日本向海洋排放核核污染水&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://tonymistark.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>ubuntu20.04/ubuntu22.04 安装，环境配置遇到的问题以及解决方案</title>
@@ -38,6 +63,31 @@
     
     
     <category term="ubuntu" scheme="https://tonymistark.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人生南北多歧路,君向潇湘我向秦</title>
+    <link href="https://tonymistark.github.io/2023/08/25/%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6/"/>
+    <id>https://tonymistark.github.io/2023/08/25/%E4%BA%BA%E7%94%9F%E5%8D%97%E5%8C%97%E5%A4%9A%E6%AD%A7%E8%B7%AF-%E5%90%9B%E5%90%91%E6%BD%87%E6%B9%98%E6%88%91%E5%90%91%E7%A7%A6/</id>
+    <published>2023-08-25T00:53:24.000Z</published>
+    <updated>2023-08-31T02:30:41.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;人生南北多歧路-君向潇湘我向秦&quot;&gt;&lt;a href=&quot;#人生南北多歧路-君向潇湘我向秦&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://tonymistark.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -448,56 +498,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;包和Crates&quot;&gt;&lt;a href=&quot;#包和Crates&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 07.02:在模块中对相关代码进行分组(Grouping Related Code in Modules)</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_02_defining_modules_to_control_scope_and_privacy/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_02_defining_modules_to_control_scope_and_privacy/</id>
-    <published>2023-05-18T02:19:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;在模块中对相关代码进行分组-Grouping-Related-Code-in-Modules&quot;&gt;&lt;a href=&quot;#在模块中对相关代码进行分组-Grouping-Related-Code-in-Modules&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 07.00:使用包、Crate和模块管理不断增长的项目</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_00_managing_growing_projects_with_packages_crates_and_modules/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_00_managing_growing_projects_with_packages_crates_and_modules/</id>
-    <published>2023-05-18T02:10:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;使用包、Crate和模块管理不断增长的项目&quot;&gt;&lt;a href=&quot;#使用包、Crate和模块管理不断增长的项目&quot; class=&quot;headerlink&quot;</summary>
         
       
     
