@@ -15,8 +15,35 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Thu, 31 Aug 2023 02:30:41 GMT</pubDate>
+    <pubDate>Thu, 31 Aug 2023 03:39:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>(Life) Advice From The Creator of C++</title>
+      <link>https://tonymistark.github.io/2023/08/31/Life-Advice-From-The-Creator-of-Cpp/</link>
+      <guid>https://tonymistark.github.io/2023/08/31/Life-Advice-From-The-Creator-of-Cpp/</guid>
+      <pubDate>Thu, 31 Aug 2023 02:32:17 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;C-之父-Bjarne-Stroustrup-分享人生建议&quot;&gt;&lt;a href=&quot;#C-之父-Bjarne-Stroustrup-分享人生建议&quot; class=&quot;headerlink&quot; title=&quot;C++ 之父 Bjarne Stroustrup</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://tonymistark.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔</category>
+      
+      
+      <category domain="https://tonymistark.github.io/tags/%E9%9A%8F%E7%AC%94/">随笔</category>
+      
+      
+      <comments>https://tonymistark.github.io/2023/08/31/Life-Advice-From-The-Creator-of-Cpp/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>谈日本向海洋排放核污染水</title>
@@ -522,33 +549,6 @@
       
       
       <comments>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_03_paths_for_referring_to_an_item_the_the_module_tree/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ch 07.01:包和Crates</title>
-      <link>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_01_packages_and_crates/</link>
-      <guid>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_01_packages_and_crates/</guid>
-      <pubDate>Thu, 18 May 2023 02:19:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;包和Crates&quot;&gt;&lt;a href=&quot;#包和Crates&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://tonymistark.github.io/categories/Rust/">Rust</category>
-      
-      
-      <category domain="https://tonymistark.github.io/tags/Rust/">Rust</category>
-      
-      
-      <comments>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_01_packages_and_crates/#disqus_thread</comments>
       
     </item>
     
