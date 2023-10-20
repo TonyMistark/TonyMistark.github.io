@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-08-31T03:39:01.992Z</updated>
+  <updated>2023-10-20T10:20:51.688Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我应该支持以色列还是巴勒斯坦？</title>
+    <link href="https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/"/>
+    <id>https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/</id>
+    <published>2023-10-20T03:11:20.000Z</published>
+    <updated>2023-10-20T10:20:51.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;我应该支持以色列还是巴勒斯坦？&quot;&gt;&lt;a href=&quot;#我应该支持以色列还是巴勒斯坦？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
+    
+    
+    <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(Life) Advice From The Creator of C++</title>
     <link href="https://tonymistark.github.io/2023/08/31/Life-Advice-From-The-Creator-of-Cpp/"/>
     <id>https://tonymistark.github.io/2023/08/31/Life-Advice-From-The-Creator-of-Cpp/</id>
     <published>2023-08-31T02:32:17.000Z</published>
-    <updated>2023-08-31T03:39:01.992Z</updated>
+    <updated>2023-10-20T10:06:09.159Z</updated>
     
     
       
@@ -46,14 +71,14 @@
     <link href="https://tonymistark.github.io/2023/08/29/%E8%B0%88%E6%97%A5%E6%9C%AC%E5%90%91%E6%B5%B7%E6%B4%8B%E6%8E%92%E6%A0%B8%E6%B1%A1%E6%9F%93%E6%B0%B4/"/>
     <id>https://tonymistark.github.io/2023/08/29/%E8%B0%88%E6%97%A5%E6%9C%AC%E5%90%91%E6%B5%B7%E6%B4%8B%E6%8E%92%E6%A0%B8%E6%B1%A1%E6%9F%93%E6%B0%B4/</id>
     <published>2023-08-29T12:03:24.000Z</published>
-    <updated>2023-08-31T02:30:41.556Z</updated>
+    <updated>2023-10-20T10:06:09.159Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;谈日本向海洋排放核核污染水&quot;&gt;&lt;a href=&quot;#谈日本向海洋排放核核污染水&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;谈日本向海洋排放核污染水&quot;&gt;&lt;a href=&quot;#谈日本向海洋排放核污染水&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -473,31 +498,6 @@
         
         
     <summary type="html">&lt;h4 id=&quot;全局操作符-The-Glob-Operator&quot;&gt;&lt;a href=&quot;#全局操作符-The-Glob-Operator&quot; class=&quot;headerlink&quot; title=&quot;全局操作符(The Glob Operator)&quot;&gt;&lt;/a&gt;全局操作符(The Glob</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 07.03:创建公有的结构体和枚举(Making Structs and Enums Public)</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_03_paths_for_referring_to_an_item_the_the_module_tree/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_03_paths_for_referring_to_an_item_the_the_module_tree/</id>
-    <published>2023-05-18T02:20:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;创建公有的结构体和枚举-Making-Structs-and-Enums-Public&quot;&gt;&lt;a href=&quot;#创建公有的结构体和枚举-Making-Structs-and-Enums-Public&quot; class=&quot;headerlink&quot;</summary>
         
       
     
