@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-10-20T11:09:18.375Z</updated>
+  <updated>2023-10-27T03:54:14.352Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance</title>
+    <link href="https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/"/>
+    <id>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</id>
+    <published>2023-10-27T03:05:45.000Z</published>
+    <updated>2023-10-27T03:54:14.352Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;PEP-703（使全局解释器锁在-CPython-中可选）验收&quot;&gt;&lt;a href=&quot;#PEP-703（使全局解释器锁在-CPython-中可选）验收&quot; class=&quot;headerlink&quot; title=&quot;PEP 703（使全局解释器锁在 CPython</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>我应该支持以色列还是巴勒斯坦？</title>
@@ -38,6 +59,31 @@
     
     
     <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ch 09.02:带有结果的可恢复错误</title>
+    <link href="https://tonymistark.github.io/2023/10/18/rust_docs/ch_09_02_recoverable_errors_with_result/"/>
+    <id>https://tonymistark.github.io/2023/10/18/rust_docs/ch_09_02_recoverable_errors_with_result/</id>
+    <published>2023-10-18T11:35:00.000Z</published>
+    <updated>2023-10-27T03:04:29.519Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;带有结果的可恢复错误&quot;&gt;&lt;a href=&quot;#带有结果的可恢复错误&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
+    
+    
+    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
     
   </entry>
   
@@ -286,31 +332,6 @@
   </entry>
   
   <entry>
-    <title>Ch 09.02:带有结果的可恢复错误</title>
-    <link href="https://tonymistark.github.io/2023/08/18/rust_docs/ch_09_02_recoverable_errors_with_result/"/>
-    <id>https://tonymistark.github.io/2023/08/18/rust_docs/ch_09_02_recoverable_errors_with_result/</id>
-    <published>2023-08-18T01:51:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;带有结果的可恢复错误&quot;&gt;&lt;a href=&quot;#带有结果的可恢复错误&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Ch 09.01:使用`panic!`的backtrace</title>
     <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_01_unrecoverable_errors_with_panic/"/>
     <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_01_unrecoverable_errors_with_panic/</id>
@@ -473,31 +494,6 @@
         
         
     <summary type="html">&lt;h4 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 07.04:全局操作符(The Glob Operator)</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_04_bringing_paths_into_scope_with_the_use_key_word/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_04_bringing_paths_into_scope_with_the_use_key_word/</id>
-    <published>2023-05-18T02:21:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;全局操作符-The-Glob-Operator&quot;&gt;&lt;a href=&quot;#全局操作符-The-Glob-Operator&quot; class=&quot;headerlink&quot; title=&quot;全局操作符(The Glob Operator)&quot;&gt;&lt;/a&gt;全局操作符(The Glob</summary>
         
       
     
