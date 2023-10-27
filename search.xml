@@ -1062,7 +1062,7 @@
       </tags>
   </entry>
   <entry>
-    <title>（使全局解释器锁在 CPython 中可选）验收</title>
+    <title>PEP 703（使全局解释器锁在 CPython 中可选）验收</title>
     <url>/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</url>
     <content><![CDATA[<h3 id="PEP-703（使全局解释器锁在-CPython-中可选）验收"><a href="#PEP-703（使全局解释器锁在-CPython-中可选）验收" class="headerlink" title="PEP 703（使全局解释器锁在 CPython 中可选）验收"></a>PEP 703（使全局解释器锁在 CPython 中可选）验收</h3><p>(Posted for the whole Steering Council.)<br>（发布给整个指导委员会。)</p>
 <p>As we’ve <a href="https://discuss.python.org/t/a-steering-council-notice-about-pep-703-making-the-global-interpreter-lock-optional-in-cpython/30474">announced before</a>, the Steering Council has decided to accept <a href="https://peps.python.org/pep-0703/">PEP 703 (Making the Global Interpreter Lock Optional in CPython)</a> . We want to make it clear why, and under what expectations we’re doing so.<br>正如我们之前<a href="https://discuss.python.org/t/a-steering-council-notice-about-pep-703-making-the-global-interpreter-lock-optional-in-cpython/30474">宣布</a>的，指导委员会已决定接受<a href="https://peps.python.org/pep-0703/">PEP 703（使CPython中的全局解释器锁可选）</a>。我们想明确说明为什么，以及我们这样做的期望。</p>
