@@ -15,11 +15,11 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Fri, 27 Oct 2023 03:54:14 GMT</pubDate>
+    <pubDate>Fri, 27 Oct 2023 03:58:25 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance</title>
+      <title>（使全局解释器锁在 CPython 中可选）验收</title>
       <link>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</link>
       <guid>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</guid>
       <pubDate>Fri, 27 Oct 2023 03:05:45 GMT</pubDate>

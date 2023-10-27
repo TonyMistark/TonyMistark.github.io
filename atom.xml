@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-10-27T03:54:14.352Z</updated>
+  <updated>2023-10-27T03:58:25.014Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance</title>
+    <title>（使全局解释器锁在 CPython 中可选）验收</title>
     <link href="https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/"/>
     <id>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</id>
     <published>2023-10-27T03:05:45.000Z</published>
-    <updated>2023-10-27T03:54:14.352Z</updated>
+    <updated>2023-10-27T03:58:25.014Z</updated>
     
     
       
