@@ -15,8 +15,36 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Fri, 27 Oct 2023 06:20:06 GMT</pubDate>
+    <pubDate>Wed, 01 Nov 2023 10:40:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>I am Grinding King</title>
+      <link>https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/</link>
+      <guid>https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/</guid>
+      <pubDate>Wed, 01 Nov 2023 10:22:41 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ice&lt;/strong&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你理解在中文里面“卷”的特别的意思吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Claude&lt;/strong&gt;&lt;/em&gt;</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>PEP 703（使全局解释器锁在 CPython 中可选）验收</title>
@@ -518,33 +546,6 @@
       
       
       <comments>https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_00_common_collections/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Ch 07.05:总结</title>
-      <link>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_05_separating_modules_into_different_files/</link>
-      <guid>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_05_separating_modules_into_different_files/</guid>
-      <pubDate>Thu, 18 May 2023 02:22:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h4 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://tonymistark.github.io/categories/Rust/">Rust</category>
-      
-      
-      <category domain="https://tonymistark.github.io/tags/Rust/">Rust</category>
-      
-      
-      <comments>https://tonymistark.github.io/2023/05/18/rust_docs/ch_07_05_separating_modules_into_different_files/#disqus_thread</comments>
       
     </item>
     

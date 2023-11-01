@@ -1,3 +1,4 @@
+https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/
 https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/
 https://tonymistark.github.io/2023/10/18/rust_docs/ch_09_02_recoverable_errors_with_result/
 https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/
