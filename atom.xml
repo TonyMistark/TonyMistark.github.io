@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-11-02T07:20:54.174Z</updated>
+  <updated>2023-11-24T03:45:39.137Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,11 +17,259 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Growth and Government</title>
+    <link href="https://tonymistark.github.io/2023/11/24/sam_altman/growth-and-government/"/>
+    <id>https://tonymistark.github.io/2023/11/24/sam_altman/growth-and-government/</id>
+    <published>2023-11-24T03:29:07.000Z</published>
+    <updated>2023-11-24T03:45:39.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这是一篇11年前于2013年3月5日,山姆</summary>
+        
+      
+    
+    
+    
+    <category term="sam_altman" scheme="https://tonymistark.github.io/categories/sam-altman/"/>
+    
+    
+    <category term="sam altman" scheme="https://tonymistark.github.io/tags/sam-altman/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Singleton</title>
+    <link href="https://tonymistark.github.io/2023/11/23/design-pattern/singleton/"/>
+    <id>https://tonymistark.github.io/2023/11/23/design-pattern/singleton/</id>
+    <published>2023-11-23T13:08:58.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Singleton-单例模式&quot;&gt;&lt;a href=&quot;#Singleton-单例模式&quot; class=&quot;headerlink&quot; title=&quot;Singleton 单例模式&quot;&gt;&lt;/a&gt;Singleton 单例模式&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prototype</title>
+    <link href="https://tonymistark.github.io/2023/11/22/design-pattern/prototype/"/>
+    <id>https://tonymistark.github.io/2023/11/22/design-pattern/prototype/</id>
+    <published>2023-11-22T13:10:02.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Prototype-原型&quot;&gt;&lt;a href=&quot;#Prototype-原型&quot; class=&quot;headerlink&quot; title=&quot;Prototype 原型&quot;&gt;&lt;/a&gt;Prototype 原型&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Builder</title>
+    <link href="https://tonymistark.github.io/2023/11/21/design-pattern/builder/"/>
+    <id>https://tonymistark.github.io/2023/11/21/design-pattern/builder/</id>
+    <published>2023-11-21T12:42:48.000Z</published>
+    <updated>2023-11-24T03:24:27.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Builder-建造者&quot;&gt;&lt;a href=&quot;#Builder-建造者&quot; class=&quot;headerlink&quot; title=&quot;Builder 建造者&quot;&gt;&lt;/a&gt;Builder 建造者&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Abstract Factory</title>
+    <link href="https://tonymistark.github.io/2023/11/20/design-pattern/abstract-factory/"/>
+    <id>https://tonymistark.github.io/2023/11/20/design-pattern/abstract-factory/</id>
+    <published>2023-11-20T12:16:29.000Z</published>
+    <updated>2023-11-24T03:24:27.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Abstract-Factory-抽象工厂&quot;&gt;&lt;a href=&quot;#Abstract-Factory-抽象工厂&quot; class=&quot;headerlink&quot; title=&quot;Abstract Factory 抽象工厂&quot;&gt;&lt;/a&gt;Abstract Factory</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Factory Method</title>
+    <link href="https://tonymistark.github.io/2023/11/16/design-pattern/factory-method/"/>
+    <id>https://tonymistark.github.io/2023/11/16/design-pattern/factory-method/</id>
+    <published>2023-11-16T13:02:09.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Factory-Method&quot;&gt;&lt;a href=&quot;#Factory-Method&quot; class=&quot;headerlink&quot; title=&quot;Factory Method&quot;&gt;&lt;/a&gt;Factory Method&lt;/h1&gt;&lt;h1 id=&quot;工厂方法&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>classification of patterns</title>
+    <link href="https://tonymistark.github.io/2023/11/15/design-pattern/classification-of-patterns/"/>
+    <id>https://tonymistark.github.io/2023/11/15/design-pattern/classification-of-patterns/</id>
+    <published>2023-11-15T15:02:50.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Classification-of-patterns&quot;&gt;&lt;a href=&quot;#Classification-of-patterns&quot; class=&quot;headerlink&quot; title=&quot;Classification of</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Why should I learn patterns?</title>
+    <link href="https://tonymistark.github.io/2023/11/15/design-pattern/why-should-i-learn-patterns/"/>
+    <id>https://tonymistark.github.io/2023/11/15/design-pattern/why-should-i-learn-patterns/</id>
+    <published>2023-11-15T11:54:40.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Why-should-I-learn-patterns&quot;&gt;&lt;a href=&quot;#Why-should-I-learn-patterns&quot; class=&quot;headerlink&quot; title=&quot;Why should I learn patterns?&quot;&gt;&lt;/a&gt;Why</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>History of patterns</title>
+    <link href="https://tonymistark.github.io/2023/11/14/design-pattern/history-of-patterns/"/>
+    <id>https://tonymistark.github.io/2023/11/14/design-pattern/history-of-patterns/</id>
+    <published>2023-11-14T12:53:45.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;History-of-patterns&quot;&gt;&lt;a href=&quot;#History-of-patterns&quot; class=&quot;headerlink&quot; title=&quot;History of patterns&quot;&gt;&lt;/a&gt;History of patterns&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>What&#39;s a design pattern?</title>
+    <link href="https://tonymistark.github.io/2023/11/09/design-pattern/what-is-a-design-pattern/"/>
+    <id>https://tonymistark.github.io/2023/11/09/design-pattern/what-is-a-design-pattern/</id>
+    <published>2023-11-09T14:18:59.000Z</published>
+    <updated>2023-11-24T03:24:27.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;What’s-a-design-pattern&quot;&gt;&lt;a href=&quot;#What’s-a-design-pattern&quot; class=&quot;headerlink&quot; title=&quot;What’s a design pattern?&quot;&gt;&lt;/a&gt;What’s a design</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一键部署 Ollama在本地启动并运行大语言模型</title>
     <link href="https://tonymistark.github.io/2023/11/02/Ollama-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
     <id>https://tonymistark.github.io/2023/11/02/Ollama-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-11-02T07:13:38.000Z</published>
-    <updated>2023-11-02T07:20:54.174Z</updated>
+    <updated>2023-11-02T07:21:35.694Z</updated>
     
     
       
@@ -256,250 +504,6 @@
     
     
     <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 添加分类和标签</title>
-    <link href="https://tonymistark.github.io/2023/08/20/hexo_categories_tag/"/>
-    <id>https://tonymistark.github.io/2023/08/20/hexo_categories_tag/</id>
-    <published>2023-08-20T08:02:39.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;创建“分类”选项&quot;&gt;&lt;a href=&quot;#创建“分类”选项&quot; class=&quot;headerlink&quot; title=&quot;创建“分类”选项&quot;&gt;&lt;/a&gt;创建“分类”选项&lt;/h3&gt;&lt;p&gt;生成“分类”页并添加tpye属性,进入博客目录。执行命令下方命令&lt;/p&gt;
-&lt;figure</summary>
-        
-      
-    
-    
-    
-    <category term="notes" scheme="https://tonymistark.github.io/categories/notes/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Commands</title>
-    <link href="https://tonymistark.github.io/2023/08/19/hexo-commands/"/>
-    <id>https://tonymistark.github.io/2023/08/19/hexo-commands/</id>
-    <published>2023-08-19T14:09:35.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Hexo-命令&quot;&gt;&lt;a href=&quot;#Hexo-命令&quot; class=&quot;headerlink&quot; title=&quot;Hexo 命令&quot;&gt;&lt;/a&gt;Hexo 命令&lt;/h3&gt;&lt;h4 id=&quot;new&quot;&gt;&lt;a href=&quot;#new&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="tools" scheme="https://tonymistark.github.io/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 只保留最近一周的日志</title>
-    <link href="https://tonymistark.github.io/2023/08/18/ubuntu-%E5%8F%AA%E4%BF%9D%E7%95%99%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E7%9A%84%E6%97%A5%E5%BF%97/"/>
-    <id>https://tonymistark.github.io/2023/08/18/ubuntu-%E5%8F%AA%E4%BF%9D%E7%95%99%E6%9C%80%E8%BF%91%E4%B8%80%E5%91%A8%E7%9A%84%E6%97%A5%E5%BF%97/</id>
-    <published>2023-08-18T07:32:38.000Z</published>
-    <updated>2023-08-22T02:05:40.767Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;只保留最近一周的日志&quot;&gt;&lt;a href=&quot;#只保留最近一周的日志&quot; class=&quot;headerlink&quot; title=&quot;只保留最近一周的日志&quot;&gt;&lt;/a&gt;只保留最近一周的日志&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;只保留最近一周的日志&lt;/p&gt;
-&lt;figure</summary>
-        
-      
-    
-    
-    
-    
-    <category term="ubuntu" scheme="https://tonymistark.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 时钟显示秒</title>
-    <link href="https://tonymistark.github.io/2023/08/18/ubuntu-%E6%97%B6%E9%92%9F%E6%98%BE%E7%A4%BA%E7%A7%92/"/>
-    <id>https://tonymistark.github.io/2023/08/18/ubuntu-%E6%97%B6%E9%92%9F%E6%98%BE%E7%A4%BA%E7%A7%92/</id>
-    <published>2023-08-18T07:12:39.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;时钟显示秒&quot;&gt;&lt;a href=&quot;#时钟显示秒&quot; class=&quot;headerlink&quot; title=&quot;时钟显示秒&quot;&gt;&lt;/a&gt;时钟显示秒&lt;/h3&gt;&lt;p&gt;Ubuntu 日期时间显示格式“月-日 星期, 时-分-秒”命令：&lt;/p&gt;
-&lt;figure</summary>
-        
-      
-    
-    
-    
-    
-    <category term="tags" scheme="https://tonymistark.github.io/tags/tags/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么看到别人过得好，我就心里好难受呢？</title>
-    <link href="https://tonymistark.github.io/2023/08/18/rust_docs/why/"/>
-    <id>https://tonymistark.github.io/2023/08/18/rust_docs/why/</id>
-    <published>2023-08-18T02:01:00.000Z</published>
-    <updated>2023-08-18T02:34:02.175Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;为什么看到别人过得好，我就心里好难受呢？&quot;&gt;&lt;a href=&quot;#为什么看到别人过得好，我就心里好难受呢？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 09.01:使用`panic!`的backtrace</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_01_unrecoverable_errors_with_panic/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_01_unrecoverable_errors_with_panic/</id>
-    <published>2023-05-18T02:35:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;使用panic-的backtrace&quot;&gt;&lt;a href=&quot;#使用panic-的backtrace&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 09.00:错误处理</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_00_error_handing/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_09_00_error_handing/</id>
-    <published>2023-05-18T02:34:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;错误处理&quot;&gt;&lt;a href=&quot;#错误处理&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 08.03:总结</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_03_hash_maps/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_03_hash_maps/</id>
-    <published>2023-05-18T02:33:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h4&gt;&lt;p&gt;vector、字符串和哈希 map</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 08.02:字符串并不简单</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_02_strings/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_02_strings/</id>
-    <published>2023-05-18T02:32:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;字符串并不简单&quot;&gt;&lt;a href=&quot;#字符串并不简单&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 08.01:丢弃vector 时也会丢弃其所有元素(Dropping a Vector Drops Its Elements)</title>
-    <link href="https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_01_vectors/"/>
-    <id>https://tonymistark.github.io/2023/05/18/rust_docs/ch_08_01_vectors/</id>
-    <published>2023-05-18T02:31:00.000Z</published>
-    <updated>2023-08-22T02:03:39.330Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;丢弃vector-时也会丢弃其所有元素-Dropping-a-Vector-Drops-Its-Elements&quot;&gt;&lt;a href=&quot;#丢弃vector-时也会丢弃其所有元素-Dropping-a-Vector-Drops-Its-Elements&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
     
   </entry>
   
