@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-12-01T09:38:31.233Z</updated>
+  <updated>2023-12-01T10:08:43.629Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>财富创造机制目录</title>
+    <link href="https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms-translate/"/>
+    <id>https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms-translate/</id>
+    <published>2023-12-01T10:07:58.000Z</published>
+    <updated>2023-12-01T10:08:43.629Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;A-catalog-of-wealth-creation-mechanisms-财富创造机制目录&quot;&gt;&lt;a href=&quot;#A-catalog-of-wealth-creation-mechanisms-财富创造机制目录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>财富创造机制清单</title>
@@ -471,31 +492,6 @@
     
     
     <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ch 09.02:带有结果的可恢复错误</title>
-    <link href="https://tonymistark.github.io/2023/10/18/rust_docs/ch_09_02_recoverable_errors_with_result/"/>
-    <id>https://tonymistark.github.io/2023/10/18/rust_docs/ch_09_02_recoverable_errors_with_result/</id>
-    <published>2023-10-18T11:35:00.000Z</published>
-    <updated>2023-10-27T03:04:29.519Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;带有结果的可恢复错误&quot;&gt;&lt;a href=&quot;#带有结果的可恢复错误&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/categories/Rust/"/>
-    
-    
-    <category term="Rust" scheme="https://tonymistark.github.io/tags/Rust/"/>
     
   </entry>
   
