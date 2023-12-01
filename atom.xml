@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-12-01T03:33:32.081Z</updated>
+  <updated>2023-12-01T03:37:23.008Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,32 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://tonymistark.github.io/2023/12/01/Remembering-Charlie-Munger/"/>
-    <id>https://tonymistark.github.io/2023/12/01/Remembering-Charlie-Munger/</id>
-    <published>2023-12-01T03:33:32.081Z</published>
-    <updated>2023-12-01T03:33:32.081Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot;&gt;&lt;a href=&quot;#伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://tonymistark.github.io/2023/12/01/kissinger-1923-2023/"/>
-    <id>https://tonymistark.github.io/2023/12/01/kissinger-1923-2023/</id>
-    <published>2023-12-01T03:33:32.081Z</published>
-    <updated>2023-12-01T03:33:32.081Z</updated>
+    <title>Henry A.Kissinger 1923 – 2023</title>
+    <link href="https://tonymistark.github.io/2023/11/29/kissinger-1923-2023/"/>
+    <id>https://tonymistark.github.io/2023/11/29/kissinger-1923-2023/</id>
+    <published>2023-11-29T03:11:20.000Z</published>
+    <updated>2023-12-01T03:37:23.008Z</updated>
     
     
       
@@ -55,6 +34,35 @@
     
     
     
+    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
+    
+    
+    <category term="历史事件" scheme="https://tonymistark.github.io/tags/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者</title>
+    <link href="https://tonymistark.github.io/2023/11/28/Remembering-Charlie-Munger/"/>
+    <id>https://tonymistark.github.io/2023/11/28/Remembering-Charlie-Munger/</id>
+    <published>2023-11-28T04:14:30.000Z</published>
+    <updated>2023-12-01T03:38:07.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot;&gt;&lt;a href=&quot;#伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
+    
+    
+    <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
@@ -63,7 +71,7 @@
     <link href="https://tonymistark.github.io/2023/11/27/sam_altman/Successful-people/"/>
     <id>https://tonymistark.github.io/2023/11/27/sam_altman/Successful-people/</id>
     <published>2023-11-27T07:25:19.000Z</published>
-    <updated>2023-11-27T07:33:53.694Z</updated>
+    <updated>2023-12-01T03:34:08.624Z</updated>
     
     
       
@@ -75,6 +83,8 @@
       
     
     
+    
+    <category term="sam_altman" scheme="https://tonymistark.github.io/categories/sam-altman/"/>
     
     
   </entry>
