@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-12-01T10:08:43.629Z</updated>
+  <updated>2023-12-04T10:14:31.996Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maydat-lip-syncing</title>
+    <link href="https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/"/>
+    <id>https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/</id>
+    <published>2023-12-04T10:04:22.000Z</published>
+    <updated>2023-12-04T10:14:31.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;今日单词&quot;&gt;&lt;a href=&quot;#今日单词&quot; class=&quot;headerlink&quot; title=&quot;今日单词&quot;&gt;&lt;/a&gt;今日单词&lt;/h3&gt;&lt;div align=&quot;center&quot;&gt; &lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Adapter</title>
+    <link href="https://tonymistark.github.io/2023/12/03/design-pattern/adapter/"/>
+    <id>https://tonymistark.github.io/2023/12/03/design-pattern/adapter/</id>
+    <published>2023-12-03T08:03:51.000Z</published>
+    <updated>2023-12-04T10:02:54.618Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter 适配器&quot;&gt;&lt;/a&gt;Adapter 适配器&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
   
   <entry>
     <title>财富创造机制目录</title>
@@ -446,52 +492,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>PEP 703（使全局解释器锁在 CPython 中可选）验收</title>
-    <link href="https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/"/>
-    <id>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</id>
-    <published>2023-10-27T03:05:45.000Z</published>
-    <updated>2023-10-27T06:20:06.945Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;PEP-703（使全局解释器锁在-CPython-中可选）验收&quot;&gt;&lt;a href=&quot;#PEP-703（使全局解释器锁在-CPython-中可选）验收&quot; class=&quot;headerlink&quot; title=&quot;PEP 703（使全局解释器锁在 CPython</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>我应该支持以色列还是巴勒斯坦？</title>
-    <link href="https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/"/>
-    <id>https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/</id>
-    <published>2023-10-20T02:11:20.000Z</published>
-    <updated>2023-10-20T11:09:18.375Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;我应该支持以色列还是巴勒斯坦？&quot;&gt;&lt;a href=&quot;#我应该支持以色列还是巴勒斯坦？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
-    
-    
-    <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   

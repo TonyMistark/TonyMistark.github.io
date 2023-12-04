@@ -15,8 +15,58 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Fri, 01 Dec 2023 10:08:43 GMT</pubDate>
+    <pubDate>Mon, 04 Dec 2023 10:14:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>maydat-lip-syncing</title>
+      <link>https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/</link>
+      <guid>https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/</guid>
+      <pubDate>Mon, 04 Dec 2023 10:04:22 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;今日单词&quot;&gt;&lt;a href=&quot;#今日单词&quot; class=&quot;headerlink&quot; title=&quot;今日单词&quot;&gt;&lt;/a&gt;今日单词&lt;/h3&gt;&lt;div align=&quot;center&quot;&gt; &lt;img</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Adapter</title>
+      <link>https://tonymistark.github.io/2023/12/03/design-pattern/adapter/</link>
+      <guid>https://tonymistark.github.io/2023/12/03/design-pattern/adapter/</guid>
+      <pubDate>Sun, 03 Dec 2023 08:03:51 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter 适配器&quot;&gt;&lt;/a&gt;Adapter 适配器&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://tonymistark.github.io/categories/design-pattern/">design-pattern</category>
+      
+      
+      <category domain="https://tonymistark.github.io/tags/Design-Pattern/">Design Pattern</category>
+      
+      
+      <comments>https://tonymistark.github.io/2023/12/03/design-pattern/adapter/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>财富创造机制目录</title>
@@ -484,56 +534,6 @@
       
       
       <comments>https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>PEP 703（使全局解释器锁在 CPython 中可选）验收</title>
-      <link>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</link>
-      <guid>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/</guid>
-      <pubDate>Fri, 27 Oct 2023 03:05:45 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h3 id=&quot;PEP-703（使全局解释器锁在-CPython-中可选）验收&quot;&gt;&lt;a href=&quot;#PEP-703（使全局解释器锁在-CPython-中可选）验收&quot; class=&quot;headerlink&quot; title=&quot;PEP 703（使全局解释器锁在 CPython</description>
-          
-        
-      
-      
-      
-      
-      
-      
-      <comments>https://tonymistark.github.io/2023/10/27/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>我应该支持以色列还是巴勒斯坦？</title>
-      <link>https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/</link>
-      <guid>https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/</guid>
-      <pubDate>Fri, 20 Oct 2023 02:11:20 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h3 id=&quot;我应该支持以色列还是巴勒斯坦？&quot;&gt;&lt;a href=&quot;#我应该支持以色列还是巴勒斯坦？&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://tonymistark.github.io/categories/writing/">writing</category>
-      
-      
-      <category domain="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/">随想</category>
-      
-      
-      <comments>https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/#disqus_thread</comments>
       
     </item>
     
