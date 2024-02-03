@@ -1,5 +1,7 @@
 ---
 title: Structural Design Patterns 结构设计模式
+categories:
+  - design-pattern
 date: 2024-02-01 22:27:04
 ---
 
