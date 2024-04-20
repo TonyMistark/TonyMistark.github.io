@@ -1,5 +1,7 @@
 ---
 title: iterator 迭代器模式
+categories:
+  - design-pattern
 date: 2024-02-19 22:43:15
 ---
 
