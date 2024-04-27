@@ -1,5 +1,7 @@
 ---
 title: 通过重视注释和代码来减少技术债务
+categories:
+  - design-pattern
 date: 2024-04-27 13:37:14
 ---
 
