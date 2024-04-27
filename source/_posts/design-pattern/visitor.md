@@ -1,5 +1,7 @@
 ---
 title: Visitor 访问者模式
+categories:
+  - design-pattern
 date: 2024-04-21 14:38:18
 ---
 

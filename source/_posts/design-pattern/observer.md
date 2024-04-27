@@ -1,5 +1,7 @@
 ---
 title: Observer 观察者模式
+categories:
+  - design-pattern
 date: 2024-04-21 10:53:27
 ---
 

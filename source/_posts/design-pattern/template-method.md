@@ -1,5 +1,7 @@
 ---
 title: Template Method 模版方法模式
+categories:
+  - design-pattern
 date: 2024-04-21 14:12:56
 ---
 

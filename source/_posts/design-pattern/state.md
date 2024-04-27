@@ -1,5 +1,7 @@
 ---
 title: State 状态模式
+categories:
+  - design-pattern
 date: 2024-04-21 12:54:21
 ---
 
@@ -416,7 +418,7 @@ Context: Transition to ConcreteStateA
 让我们构建一个具有以下状态转换的音乐播放器：
 
 
-<div align="center"> <img src="/images/state-code-rust-example.png"/><p style="text-align: center;"></p></div>
+<div align="center"> <img src="/images/state-code-rust-example.jpeg"/><p style="text-align: center;"></p></div>
 
 
 有一个基本特征 `State` 和 `play` `stop` 方法，可以进行状态转换：
@@ -762,6 +764,8 @@ fn execute(s: &mut Cursive, button: &'static str) {
 
 
 <div align="center"> <img src="/images/state-rust-example-screenshots1.png"/><p style="text-align: center;"></p></div>
+
+
 
 
 

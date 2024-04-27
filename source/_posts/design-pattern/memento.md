@@ -1,5 +1,7 @@
 ---
 title: Memento 备忘录模式
+categories:
+  - design-pattern
 date: 2024-04-21 09:59:34
 ---
 

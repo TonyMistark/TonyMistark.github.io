@@ -1,5 +1,7 @@
 ---
 title: Strategy 策略模式
+categories:
+  - design-pattern
 date: 2024-04-21 13:43:14
 ---
 
