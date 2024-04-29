@@ -85,7 +85,8 @@ fn find_right_triangles(max_side: i32) -> HashSet<(i32, i32, i32)> {
     let mut triangles: HashSet<(i32, i32, i32)> = HashSet::new();
     for a in 1..=max_side {
         for b in a..=max_side {
-            let c = (a * a + b * b).sqrt() as i32;
+            let c_f = (a as f64).powf(2.0) + (b as f64).powf(2.0);
+            let c = c_f.sqrt() as i32;
             if c <= max_side && a * a + b * b == c * c {
                 triangles.insert((a, b, c));
             }
