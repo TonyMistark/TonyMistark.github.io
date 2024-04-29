@@ -1,4 +1,12 @@
-计算边长200以内的直角三角形有那些？用python，java，go，rust，haskell，c，c++实现
+---
+title: 计算边长200以内的直角三角形有那些？
+categories:
+  - algorithm
+tags: algorithm
+date: 2024-04-29 11:44:51
+---
+
+# 计算边长200以内的直角三角形有那些？用python，java，go，rust，haskell，c，c++实现
 
 Python:
 ```python
