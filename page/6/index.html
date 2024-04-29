@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_05_02_example_structs/">
+    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2024/04/21/design-pattern/strategy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -197,7 +197,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/12/29/rust_docs/ch_05_02_example_structs/" class="post-title-link" itemprop="url">Ch 05.02:An Example Program Using Structs</a>
+            <a href="/2024/04/21/design-pattern/strategy/" class="post-title-link" itemprop="url">Strategy 策略模式</a>
         </h2>
 
         <div class="post-meta">
@@ -207,14 +207,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-12-29 15:21:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:21:00+08:00">2022-12-29</time>
+              <time title="Created: 2024-04-21 13:43:14" itemprop="dateCreated datePublished" datetime="2024-04-21T13:43:14+08:00">2024-04-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
+                <time title="Modified: 2024-04-29 11:33:27" itemprop="dateModified" datetime="2024-04-29T11:33:27+08:00">2024-04-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -222,7 +222,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
+                  <a href="/categories/design-pattern/" itemprop="url" rel="index"><span itemprop="name">design-pattern</span></a>
                 </span>
             </span>
 
@@ -232,14 +232,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>573</span>
+              <span>4.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>15 mins.</span>
             </span>
 
         </div>
@@ -251,867 +251,125 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="An-Example-Program-Using-Structs"><a href="#An-Example-Program-Using-Structs" class="headerlink" title="An Example Program Using Structs"></a>An Example Program Using Structs</h4><p>为了理解何时需要使用结构体，让我们编写一个计算矩形面积的程序。我们将通过使用单个变量开始，然后重构这个程序，直到用结构体替代它。</p>
-<p>让我们用cargo创建一个新的项目叫做<code>rectangles</code>的二进制程序，它获取以像素为单位的矩形的宽度和高度，并计算出矩形的面积。Listing 5-8 展示一个简短的程序：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Rectangle</span> &#123;</span><br><span class="line">    width: <span class="type">u32</span>,</span><br><span class="line">    height: <span class="type">u32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">scale</span> = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">rect1</span> = Rectangle &#123;</span><br><span class="line">        width: dbg!(<span class="number">30</span> * scale),</span><br><span class="line">        height: <span class="number">50</span>,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    dbg!(&amp;rect1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="Intent-意图"><a href="#Intent-意图" class="headerlink" title="Intent 意图"></a>Intent 意图</h2><p>策略是一种行为设计模式，可用于定义一系列算法，将每个算法放入单独的类中，并使其对象可互换。</p>
+<div align="center"> <img src="/images/strategy-header.png"/><p style="text-align: center;"></p></div>
 
-<p>我们可以把<code>dbg!</code>放在表达式放在<code>30 * scale</code>周围，以为你<code>dbg!</code>返回表达式的值的所有权，所以width字段将获得相同的值，就像我们在这里没有<code>dbg!</code>调用一样。我们不希望dbg!拥有rect1的所有权，所以我们在下一次调用dbg!时传递一个引用。下面是这个例子的输出结果：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cargo run</span><br><span class="line">   Compiling rectangles v0.<span class="number">1.0</span> (file:<span class="comment">///projects/rectangles)</span></span><br><span class="line">    Finished dev [unoptimized + debuginfo] <span class="title function_ invoke__">target</span>(s) <span class="keyword">in</span> <span class="number">0.61</span>s</span><br><span class="line">     Running `target/debug/rectangles`</span><br><span class="line">[src/main.rs:<span class="number">10</span>] <span class="number">30</span> * scale = <span class="number">60</span></span><br><span class="line">[src/main.rs:<span class="number">14</span>] &amp;rect1 = Rectangle &#123;</span><br><span class="line">    width: <span class="number">60</span>,</span><br><span class="line">    height: <span class="number">50</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>我们可以看到第一条输出来自src&#x2F;main.rs第10行，我们正在调用表达式<code>30 * scale</code>，其结果值是60(为整数实现的Debug格式化是只打印它们的值)。在src&#x2F;main.rs第14行的dbg!调用输出&amp;rect1的值，即<code>Rectangle</code>类型。<code>dbg!</code>宏确实很有用。</p>
-<p>除了<code>Debug</code>trait，Rust还为我们提供了很多通过derive属性来使用的trait，它们可以为我们的自定义类型增加实用的行为。这些trait和行为被列举在附录C(Appendix C)。第十章会介绍如何通过自定义行为来实现这些trait，同时还有如何创建你自己的trait。除了derive之外，还有很多属性；更多信息见”Rust Reference”的Attribute部分。</p>
-<p>我们的<code>area</code>函数是非常特殊的，它只计算长方形的面积。如果这个行为与<code>Rectangle</code>结构体再结合得更紧密一些就更好了，因为它不能用于其他类型。现在让我们看看如何继续重构这些代码，来将<code>area</code>函数协调进<code>Rectangle</code>类型定义的<code>area</code>方法中。</p>
+<h2 id="Problem-问题"><a href="#Problem-问题" class="headerlink" title="Problem 问题"></a>Problem 问题</h2><p>有一天，您决定为休闲旅行者创建一个导航应用程序。该应用程序以一张漂亮的地图为中心，可帮助用户在任何城市快速定位自己。</p>
+<p>该应用程序最需要的功能之一是自动路线规划。用户应该能够输入地址，并查看地图上显示的到达该目的地的最快路线。</p>
+<p>该应用程序的第一个版本只能在道路上构建路线。开车旅行的人们都欢呼雀跃。但显然，并不是每个人都喜欢在度假时开车。因此，在下一次更新中，您添加了一个构建步行路线的选项。在那之后，你添加了另一个选项，让人们在他们的路线中使用公共交通工具。</p>
+<p>然而，这仅仅是个开始。后来，您计划为骑自行车的人添加路线建设。甚至后来，还有另一种选择，可以建造穿越城市所有旅游景点的路线。</p>
+<div align="center"> <img src="/images/strategy-problem1.png"/><p style="text-align: center;">导航器的代码变得臃肿。</p></div>
 
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+<p>虽然从商业角度来看，该应用程序是成功的，但技术部分却让您头疼不已。每次添加新的路由算法时，导航器的主类大小都会增加一倍。在某些时候，野兽变得太难维护了。</p>
+<p>对其中一种算法的任何更改，无论是简单的错误修复还是街道分数的轻微调整，都会影响整个班级，从而增加在已经工作的代码中产生错误的机会。</p>
+<p>此外，团队合作变得效率低下。你的队友在成功发布后立即被雇用，他们抱怨他们花了太多时间解决合并冲突。实现一个新功能需要你改变同一个巨大的类，与其他人生成的代码冲突。</p>
+<h2 id="Solution-解决方案"><a href="#Solution-解决方案" class="headerlink" title="Solution 解决方案"></a>Solution 解决方案</h2><p>策略模式建议你选择一个以多种不同方式做特定事情的类，并将所有这些算法提取到称为策略的单独类中。</p>
+<p>原始类（称为 context）必须具有一个字段，用于存储对其中一个策略的引用。上下文将工作委托给链接的策略对象，而不是单独执行它。</p>
+<p>上下文不负责为作业选择适当的算法。相反，客户端将所需的策略传递给上下文。事实上，上下文对策略知之甚少。它通过相同的通用接口与所有策略一起工作，该接口仅公开用于触发封装在所选策略中的算法的单一方法。</p>
+<p>这样，上下文就独立于具体策略，因此您可以添加新算法或修改现有算法，而无需更改上下文或其他策略的代码。</p>
+<div align="center"> <img src="/images/strategy-problem1.png"/><p style="text-align: center;">路线规划策略。</p></div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_05_01_defining_and_instantiating_structs/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
+<p>在我们的导航应用程序中，可以使用单个 <code>buildRoute</code> 方法将每个路由算法提取到其自己的类中。该方法接受起点和终点，并返回路由检查点的集合。</p>
+<p>尽管给定相同的参数，每个路由类可能会构建不同的路由，但主导航器类并不真正关心选择哪种算法，因为它的主要工作是在地图上呈现一组检查点。该类具有切换活动路由策略的方法，因此其客户端（如用户界面中的按钮）可以将当前选定的路由行为替换为另一个路由行为。</p>
+<h2 id="Real-World-Analogy-真实世界的类比"><a href="#Real-World-Analogy-真实世界的类比" class="headerlink" title="Real-World Analogy 真实世界的类比"></a>Real-World Analogy 真实世界的类比</h2><div align="center"> <img src="/images/strategy-comic1.png"/><p style="text-align: center;">前往机场的各种策略。</p></div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_05_01_defining_and_instantiating_structs/" class="post-title-link" itemprop="url">Ch 05.01:结构体数据的所有权(Ownership of Struct Data)</a>
-        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+<p>想象一下，你必须去机场。您可以搭乘公共汽车、叫出租车或骑自行车。这些是您的运输策略。您可以根据预算或时间限制等因素选择其中一种策略。</p>
+<h2 id="Structure-结构"><a href="#Structure-结构" class="headerlink" title="Structure 结构"></a>Structure 结构</h2><div align="center"> <img src="/images/strategy-structure.png"/><p style="text-align: center;"></p></div>
 
-              <time title="Created: 2022-12-29 15:20:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:20:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
 
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>420</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
-            </span>
+<ol>
+<li>上下文维护对其中一个具体策略的引用，并仅通过策略接口与此对象进行通信。</li>
+<li>策略界面是所有具体策略的通用界面。它声明上下文用于执行策略的方法。</li>
+<li>具体策略实现上下文使用的算法的不同变体。</li>
+<li>上下文每次需要运行算法时都会在链接的策略对象上调用执行方法。上下文不知道它使用哪种类型的策略，也不知道算法是如何执行的。</li>
+<li>客户端创建一个特定的策略对象并将其传递给上下文。上下文公开了一个 setter，它允许客户端在运行时替换与上下文关联的策略。</li>
+</ol>
+<h2 id="Pseudocode-伪代码"><a href="#Pseudocode-伪代码" class="headerlink" title="Pseudocode 伪代码"></a>Pseudocode 伪代码</h2><p>在此示例中，上下文使用多种策略来执行各种算术运算。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// The strategy interface declares operations common to all</span></span><br><span class="line"><span class="comment">// supported versions of some algorithm. The context uses this</span></span><br><span class="line"><span class="comment">// interface to call the algorithm defined by the concrete</span></span><br><span class="line"><span class="comment">// strategies.</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Strategy</span> is</span><br><span class="line">    method <span class="title function_">execute</span><span class="params">(a, b)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Concrete strategies implement the algorithm while following</span></span><br><span class="line"><span class="comment">// the base strategy interface. The interface makes them</span></span><br><span class="line"><span class="comment">// interchangeable in the context.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyAdd</span> <span class="keyword">implements</span> <span class="title class_">Strategy</span> is</span><br><span class="line">    method <span class="title function_">execute</span><span class="params">(a, b)</span> is</span><br><span class="line">        <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategySubtract</span> <span class="keyword">implements</span> <span class="title class_">Strategy</span> is</span><br><span class="line">    method <span class="title function_">execute</span><span class="params">(a, b)</span> is</span><br><span class="line">        <span class="keyword">return</span> a - b</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyMultiply</span> <span class="keyword">implements</span> <span class="title class_">Strategy</span> is</span><br><span class="line">    method <span class="title function_">execute</span><span class="params">(a, b)</span> is</span><br><span class="line">        <span class="keyword">return</span> a * b</span><br><span class="line"></span><br><span class="line"><span class="comment">// The context defines the interface of interest to clients.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Context</span> is</span><br><span class="line">    <span class="comment">// The context maintains a reference to one of the strategy</span></span><br><span class="line">    <span class="comment">// objects. The context doesn&#x27;t know the concrete class of a</span></span><br><span class="line">    <span class="comment">// strategy. It should work with all strategies via the</span></span><br><span class="line">    <span class="comment">// strategy interface.</span></span><br><span class="line">    <span class="keyword">private</span> strategy: Strategy</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Usually the context accepts a strategy through the</span></span><br><span class="line">    <span class="comment">// constructor, and also provides a setter so that the</span></span><br><span class="line">    <span class="comment">// strategy can be switched at runtime.</span></span><br><span class="line">    method <span class="title function_">setStrategy</span><span class="params">(Strategy strategy)</span> is</span><br><span class="line">        <span class="built_in">this</span>.strategy = strategy</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The context delegates some work to the strategy object</span></span><br><span class="line">    <span class="comment">// instead of implementing multiple versions of the</span></span><br><span class="line">    <span class="comment">// algorithm on its own.</span></span><br><span class="line">    method <span class="title function_">executeStrategy</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> is</span><br><span class="line">        <span class="keyword">return</span> strategy.execute(a, b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// The client code picks a concrete strategy and passes it to</span></span><br><span class="line"><span class="comment">// the context. The client should be aware of the differences</span></span><br><span class="line"><span class="comment">// between strategies in order to make the right choice.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ExampleApplication</span> is</span><br><span class="line">    method <span class="title function_">main</span><span class="params">()</span> is</span><br><span class="line">        Create context object.</span><br><span class="line"></span><br><span class="line">        Read first number.</span><br><span class="line">        Read last number.</span><br><span class="line">        Read the desired action from user input.</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (action == addition) then</span><br><span class="line">            context.setStrategy(<span class="keyword">new</span> <span class="title class_">ConcreteStrategyAdd</span>())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (action == subtraction) then</span><br><span class="line">            context.setStrategy(<span class="keyword">new</span> <span class="title class_">ConcreteStrategySubtract</span>())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (action == multiplication) then</span><br><span class="line">            context.setStrategy(<span class="keyword">new</span> <span class="title class_">ConcreteStrategyMultiply</span>())</span><br><span class="line"></span><br><span class="line">        result = context.executeStrategy(First number, Second number)</span><br><span class="line"></span><br><span class="line">        Print result.</span><br></pre></td></tr></table></figure>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="结构体数据的所有权-Ownership-of-Struct-Data"><a href="#结构体数据的所有权-Ownership-of-Struct-Data" class="headerlink" title="结构体数据的所有权(Ownership of Struct Data)"></a>结构体数据的所有权(Ownership of Struct Data)</h4><p>在Listing 5-1中的<code>User</code>结构体定义中，我们使用了自身拥有所有权的String类型而不是&amp;str字符串slice类型。这是一个有意为之的选择，因为我们想要这个结构体拥有它所有的数据，为此只要整个结构体是有效的话数据也是有效的。可以使结构体存储被其他对象拥有的数据的引用，不过这么做的话需要用上生命周期(lifetimes)，这是一个第十章会讨论的Rust功能。生命周期确保结构体引用的数据有效性跟结构体本身保持一致。如果你尝试在结构体中存储一个引用而不是指定生命周期将是无效的，比如这样：</p>
-<p>filename: src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    active: <span class="type">bool</span>,</span><br><span class="line">    username: &amp;<span class="type">str</span>,</span><br><span class="line">    email: &amp;<span class="type">str</span>,</span><br><span class="line">    sign_in_count: <span class="type">u64</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">user1</span> = User &#123;</span><br><span class="line">        email: <span class="string">&quot;someone@example.com&quot;</span>,</span><br><span class="line">        username: <span class="string">&quot;someusername123&quot;</span>,</span><br><span class="line">        active: <span class="literal">true</span>,</span><br><span class="line">        sign_in_count: <span class="number">1</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译器会控诉它需要生命周期标识符：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">$ cargo run</span><br><span class="line">   Compiling structs v0.<span class="number">1.0</span> (file:<span class="comment">///projects/structs)</span></span><br><span class="line">error[E0106]: missing lifetime specifier</span><br><span class="line"> -<span class="punctuation">-&gt;</span> src/main.rs:<span class="number">3</span>:<span class="number">15</span></span><br><span class="line">  |</span><br><span class="line"><span class="number">3</span> |     username: &amp;<span class="type">str</span>,</span><br><span class="line">  |               ^ expected named lifetime parameter</span><br><span class="line">  |</span><br><span class="line">help: consider introducing a named lifetime parameter</span><br><span class="line">  |</span><br><span class="line"><span class="number">1</span> ~ <span class="keyword">struct</span> <span class="title class_">User</span>&lt;<span class="symbol">&#x27;a</span>&gt; &#123;</span><br><span class="line"><span class="number">2</span> |     active: <span class="type">bool</span>,</span><br><span class="line"><span class="number">3</span> ~     username: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>,</span><br><span class="line">  |</span><br><span class="line"></span><br><span class="line">error[E0106]: missing lifetime specifier</span><br><span class="line"> -<span class="punctuation">-&gt;</span> src/main.rs:<span class="number">4</span>:<span class="number">12</span></span><br><span class="line">  |</span><br><span class="line"><span class="number">4</span> |     email: &amp;<span class="type">str</span>,</span><br><span class="line">  |            ^ expected named lifetime parameter</span><br><span class="line">  |</span><br><span class="line">help: consider introducing a named lifetime parameter</span><br><span class="line">  |</span><br><span class="line"><span class="number">1</span> ~ <span class="keyword">struct</span> <span class="title class_">User</span>&lt;<span class="symbol">&#x27;a</span>&gt; &#123;</span><br><span class="line"><span class="number">2</span> |     active: <span class="type">bool</span>,</span><br><span class="line"><span class="number">3</span> |     username: &amp;<span class="type">str</span>,</span><br><span class="line"><span class="number">4</span> ~     email: &amp;<span class="symbol">&#x27;a</span> <span class="type">str</span>,</span><br><span class="line">  |</span><br><span class="line"></span><br><span class="line">For more information about this error, <span class="keyword">try</span> `rustc --explain E0106`.</span><br><span class="line">error: could not compile `structs` due to <span class="number">2</span> previous errors=</span><br></pre></td></tr></table></figure>
-
-<p>第十章会讲到如何修复这个问题以便在结构体中存储引用，不过现在，我们使用像String这类拥有所有权的类型来替代&amp;str这样的引用以修正这个错误。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_05_00_structs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_05_00_structs/" class="post-title-link" itemprop="url">Ch 05.00:Using Structs to Structure Related Data</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:19:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:19:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>191</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="Using-Structs-to-Structure-Related-Data"><a href="#Using-Structs-to-Structure-Related-Data" class="headerlink" title="Using Structs to Structure Related Data"></a>Using Structs to Structure Related Data</h4><p>struct or structure 是一个自定义的数据类型，允许你包装和命名多个相关联的值，从而形成一个有意义的组合。如果你熟悉一门面向对象语言，struct就像对象中的数据属性。在本章中，我们会对元组和结构体进行对比和对照。还将演示如何定义和实现实例化结构体，并讨论如何定义关联函数，特别是被称为方法的那种关联函数，以指定与结构体类型相关的行为。你可以在程序中基于结构体和枚举(enum)（在第六章中介绍）创建新类型，以充分利用Rust的编译时类型检查。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_04_03_slices/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_04_03_slices/" class="post-title-link" itemprop="url">Ch 04.03:总结</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:18:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:18:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>172</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>所有权、借用和slice这些概念让Rust程序在编译时保证内存安全。Rust语言提供了跟其他系统编程语言相同的方式来控制你使用内存，但拥有数据所有者在离开作用域后自动清除其数据的功能意味着你无需额外编写和调试相关的控制代码。</p>
-<p>所有权系统影响了Rust中很多其他部分的工作方式，所以我们还会继续讲到这些概念，这将贯穿本书余下的内容。让我们开始第五章吧，来看看如何将多份数据组合进一个struct中。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_04_02_references_and_borrowing/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_04_02_references_and_borrowing/" class="post-title-link" itemprop="url">Ch 04.02:引用的规则(The Rules of References)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:17:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:17:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>85</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="引用的规则-The-Rules-of-References"><a href="#引用的规则-The-Rules-of-References" class="headerlink" title="引用的规则(The Rules of References)"></a>引用的规则(The Rules of References)</h4><p>让我们来重新概况一下之前对引用的讨论：</p>
-<ul>
-<li>在任意给定时间，要么只能有一个可变引用，要么只能有多个不可变引用。</li>
-<li>引用必须总是有效的。</li>
+<h2 id="Applicability-适用性"><a href="#Applicability-适用性" class="headerlink" title="Applicability 适用性"></a>Applicability 适用性</h2><ul>
+<li>如果要在对象中使用算法的不同变体，并且能够在运行时从一种算法切换到另一种算法，请使用 Strategy 模式。</li>
+<li>策略模式允许您通过将对象与不同的子对象相关联来间接更改对象在运行时的行为，这些子对象可以以不同的方式执行特定的子任务。</li>
+<li>当您有许多相似的类时，请使用策略，这些类仅在执行某些行为的方式上有所不同。</li>
+<li>Strategy 模式允许您将不同的行为提取到单独的类层次结构中，并将原始类合并为一个类，从而减少重复代码。</li>
+<li>使用该模式将类的业务逻辑与算法的实现细节隔离开来，这些算法在该逻辑的上下文中可能不那么重要。</li>
+<li>策略模式允许您将各种算法的代码、内部数据和依赖项与代码的其余部分隔离开来。各种客户端都获得了一个简单的接口来执行算法并在运行时切换它们。</li>
+<li>当您的类具有在同一算法的不同变体之间切换的大量条件语句时，请使用该模式。</li>
+<li>Strategy 模式允许您通过将所有算法提取到单独的类中来消除这种条件，所有这些类都实现相同的接口。原始对象将执行委托给其中一个对象，而不是实现算法的所有变体。</li>
 </ul>
-<p>接下来，我们来看看另一种不同类型的引用：slice。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_04_01_what_id_ownership/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_04_01_what_id_ownership/" class="post-title-link" itemprop="url">Ch 04.01:返回值与作用域(Return Values and Scope)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:16:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:16:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>497</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="返回值与作用域-Return-Values-and-Scope"><a href="#返回值与作用域-Return-Values-and-Scope" class="headerlink" title="返回值与作用域(Return Values and Scope)"></a>返回值与作用域(Return Values and Scope)</h4><p>返回值也可以转移所有权。Listing 4-4展示了一个示例，与Listing4-3一样带有类似的注释。</p>
-<p>Filename: src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s1</span> = <span class="title function_ invoke__">gives_ownership</span>();         <span class="comment">// gives_ownership moves its return</span></span><br><span class="line">                                        <span class="comment">// value into s1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s2</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);     <span class="comment">// s2 comes into scope</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s3</span> = <span class="title function_ invoke__">takes_and_gives_back</span>(s2);  <span class="comment">// s2 is moved into</span></span><br><span class="line">                                        <span class="comment">// takes_and_gives_back, which also</span></span><br><span class="line">                                        <span class="comment">// moves its return value into s3</span></span><br><span class="line">&#125; <span class="comment">// Here, s3 goes out of scope and is dropped. s2 was moved, so nothing</span></span><br><span class="line">  <span class="comment">// happens. s1 goes out of scope and is dropped.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">gives_ownership</span>() <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123;             <span class="comment">// gives_ownership will move its</span></span><br><span class="line">                                             <span class="comment">// return value into the function</span></span><br><span class="line">                                             <span class="comment">// that calls it</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">some_string</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;yours&quot;</span>); <span class="comment">// some_string comes into scope</span></span><br><span class="line"></span><br><span class="line">    some_string                              <span class="comment">// some_string is returned and</span></span><br><span class="line">                                             <span class="comment">// moves out to the calling</span></span><br><span class="line">                                             <span class="comment">// function</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This function takes a String and returns one</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">takes_and_gives_back</span>(a_string: <span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123; <span class="comment">// a_string comes into</span></span><br><span class="line">                                                      <span class="comment">// scope</span></span><br><span class="line"></span><br><span class="line">    a_string  <span class="comment">// a_string is returned and moves out to the calling function</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Listing 4-4: Transferring ownership of return values</p>
-<p>变量的所有权总是遵循相同的模式：将赋值给另一个变量时移动它。当持有堆中数据的变量离开作用域时，其值将通过drop被清理，除非数据被移动为另一个变量所有。</p>
-<p>虽然这样是可以的，但是在每一个函数中都获取所有权并接着返回所有权有些啰嗦。如果我们想要函数使用一个值但不获取所有权该怎么办呢？如果我们还要接着使用它的话，每次都穿进去再返回来就有点烦人了，除此之外，我们可能想返回函数中产生的一些数据。</p>
-<p>我们可以使用元组来返回多个值，如Listing 4-5。</p>
-<p>Filename：src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> (s2, len) = <span class="title function_ invoke__">calculate_length</span>(s1);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The length of &#x27;&#123;&#125;&#x27; is &#123;&#125;.&quot;</span>, s2, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">calculate_length</span>(s: <span class="type">String</span>) <span class="punctuation">-&gt;</span> (<span class="type">String</span>, <span class="type">usize</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">length</span> = s.<span class="title function_ invoke__">len</span>(); <span class="comment">// len() returns the length of a String</span></span><br><span class="line"></span><br><span class="line">    (s, length)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Listing 4-5: Returning ownership of parameters</p>
-<p>但是，对于一个应该是普通的概念来说，这太多的仪式和大量的工作。幸运的是，Rust有一个特性，可以在不用转移所有权的情况下使用值，它叫做引用(references)。</p>
-<p>接下来将讲”引用和借用(References and Borrowing)”</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_04_00_understanding_ownership/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_04_00_understanding_ownership/" class="post-title-link" itemprop="url">Ch 04.00:Understanding Ownership</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:14:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:14:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>100</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="Understanding-Ownership"><a href="#Understanding-Ownership" class="headerlink" title="Understanding Ownership"></a>Understanding Ownership</h4><p>Ownership 是Rust最独特的特性，并且对剩下的部分有着深刻的意义。它能让Rust在不需要垃圾回收(garbage collection)就能保证内存安全，所以能够很好地理解owership是如何工作的是非常重要的。在本章，我们将讲和ownership关联的一些特性：borrowing, slice, 和Rust如何在内存中布局数据。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_05_control_flow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_03_05_control_flow/" class="post-title-link" itemprop="url">Ch 03.05:总结(Summary)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:12:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:12:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>157</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="总结-Summary"><a href="#总结-Summary" class="headerlink" title="总结(Summary)"></a>总结(Summary)</h4><p>你做到了！这是相当大的一章：你学习了关于variables, scalar and compound data type, functions, comments, if expressions, and loops! 讨论并练习这些概念。尝试构建如下的程序：</p>
+<h2 id="How-to-Implement-如何实现"><a href="#How-to-Implement-如何实现" class="headerlink" title="How to Implement 如何实现"></a>How to Implement 如何实现</h2><ol>
+<li>在上下文类中，标识容易频繁更改的算法。它也可能是一个大规模条件，在运行时选择并执行同一算法的变体。</li>
+<li>声明算法所有变体通用的策略接口。</li>
+<li>一个接一个地，将所有算法提取到它们自己的类中。他们都应该实现策略接口。</li>
+<li>在上下文类中，添加一个用于存储对策略对象的引用的字段。提供用于替换该字段值的 setter。上下文应仅通过策略接口与策略对象一起使用。上下文可以定义一个接口，让策略访问其数据。</li>
+<li>上下文的客户端必须将其与合适的策略相关联，该策略与他们期望上下文执行其主要工作的方式相匹配。</li>
+</ol>
+<h2 id="Pros-and-Cons-优点和缺点"><a href="#Pros-and-Cons-优点和缺点" class="headerlink" title="Pros and Cons 优点和缺点"></a>Pros and Cons 优点和缺点</h2><table>
+<thead>
+<tr>
+<th>优点√</th>
+<th>缺点×</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>您可以在运行时交换对象内部使用的算法。</td>
+<td>如果你只有几种算法，而且它们很少改变，那么就没有真正的理由用模式附带的新类和接口来使程序过于复杂。</td>
+</tr>
+<tr>
+<td>您可以将算法的实现详细信息与使用它的代码隔离开来。</td>
+<td>客户必须意识到策略之间的差异，以便能够选择合适的策略。</td>
+</tr>
+<tr>
+<td>您可以将继承替换为组合。</td>
+<td>许多现代编程语言都支持函数类型，允许您在一组匿名函数中实现不同版本的算法。然后，您可以像使用策略对象一样使用这些函数，但不会因额外的类和接口而使代码膨胀。</td>
+</tr>
+<tr>
+<td>开&#x2F;闭原则。您可以引入新策略，而无需更改上下文。</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Relations-with-Other-Patterns-与其他模式的关系"><a href="#Relations-with-Other-Patterns-与其他模式的关系" class="headerlink" title="Relations with Other Patterns 与其他模式的关系"></a>Relations with Other Patterns 与其他模式的关系</h2><ul>
+<li><p>桥接、状态、策略（在某种程度上还有适配器）具有非常相似的结构。事实上，所有这些模式都是基于构图的，而构图是将工作委托给其他对象。但是，它们都解决了不同的问题。模式不仅仅是以特定方式构建代码的秘诀。它还可以向其他开发人员传达该模式解决的问题。</p>
+</li>
+<li><p>“命令”和“策略”可能看起来很相似，因为您可以使用它们来参数化具有某些操作的对象。但是，他们的意图截然不同。</p>
 <ul>
-<li>相互转换摄氏与华氏温度(Convert temperatures between Fahrenheit and Celsius.)</li>
-<li>生成n阶斐波那契数列(Generate th nth Fibonacci number.)</li>
-<li>打印圣诞颂歌词，并利用歌词中的重复部分(编写循环)(Print the lyrics to the Christmas carol “The Twelve Days of Christmas,” taking advantage of the repetition in the song.)</li>
+<li>您可以使用 Command 将任何操作转换为对象。操作的参数将成为该对象的字段。转换允许您延迟操作的执行、排队、存储命令的历史记录、将命令发送到远程服务等。</li>
+<li>另一方面，Strategy 通常描述执行相同操作的不同方法，允许您在单个上下文类中交换这些算法。</li>
 </ul>
-<p>当你准备好继续的时候，让我们讨论一个其他语言中不常见的概念：所有权(ownership)</p>
+</li>
+<li><p>Decorator 可让您更改对象的皮肤，而 Strategy 可让您更改内脏。</p>
+</li>
+<li><p>模板方法基于继承：它允许您通过在子类中扩展算法的各个部分来更改这些部分。策略基于组合：您可以通过为对象提供与该行为相对应的不同策略来改变对象的部分行为。Template Method 在类级别工作，因此它是静态的。策略在对象级别工作，允许您在运行时切换行为。</p>
+</li>
+<li><p>状态可以看作是战略的延伸。这两种模式都基于组合：它们通过将一些工作委派给帮助对象来改变上下文的行为。策略使这些对象完全独立，彼此不相知。但是，State 不会限制具体状态之间的依赖关系，而是允许它们随意更改上下文的状态。</p>
+</li>
+</ul>
+<h2 id="Code-Examples-代码示例"><a href="#Code-Examples-代码示例" class="headerlink" title="Code Examples 代码示例"></a>Code Examples 代码示例</h2><h1 id="trategy-in-Python"><a href="#trategy-in-Python" class="headerlink" title="trategy in Python"></a><strong>trategy</strong> in Python</h1><p>策略是一种行为设计模式，它将一组行为转换为对象，并使它们在原始上下文对象中可互换。</p>
+<p>原始对象（称为 context）包含对策略对象的引用。将执行行为的上下文委托给链接的策略对象。为了改变上下文执行其工作的方式，其他对象可能会用另一个对象替换当前链接的策略对象。</p>
+<p>使用示例：Strategy 模式在 Python 代码中很常见。它通常用于各种框架中，为用户提供一种在不扩展类的情况下更改类行为的方法。</p>
+<p>标识：策略模式可以通过允许嵌套对象执行实际工作的方法以及允许将该对象替换为其他对象的 setter 来识别。</p>
+<h4 id="main-py：概念示例"><a href="#main-py：概念示例" class="headerlink" title="main.py：概念示例"></a>main.py：概念示例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> annotations</span><br><span class="line"><span class="keyword">from</span> abc <span class="keyword">import</span> ABC, abstractmethod</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Context</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    The Context defines the interface of interest to clients.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, strategy: Strategy</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Usually, the Context accepts a strategy through the constructor, but</span></span><br><span class="line"><span class="string">        also provides a setter to change it at runtime.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        self._strategy = strategy</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">strategy</span>(<span class="params">self</span>) -&gt; Strategy:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        The Context maintains a reference to one of the Strategy objects. The</span></span><br><span class="line"><span class="string">        Context does not know the concrete class of a strategy. It should work</span></span><br><span class="line"><span class="string">        with all strategies via the Strategy interface.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self._strategy</span><br><span class="line"></span><br><span class="line"><span class="meta">    @strategy.setter</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">strategy</span>(<span class="params">self, strategy: Strategy</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Usually, the Context allows replacing a Strategy object at runtime.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        self._strategy = strategy</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_some_business_logic</span>(<span class="params">self</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        The Context delegates some work to the Strategy object instead of</span></span><br><span class="line"><span class="string">        implementing multiple versions of the algorithm on its own.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Context: Sorting data using the strategy (not sure how it&#x27;ll do it)&quot;</span>)</span><br><span class="line">        result = self._strategy.do_algorithm([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;,&quot;</span>.join(result))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Strategy</span>(<span class="title class_ inherited__">ABC</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    The Strategy interface declares operations common to all supported versions</span></span><br><span class="line"><span class="string">    of some algorithm.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    The Context uses this interface to call the algorithm defined by Concrete</span></span><br><span class="line"><span class="string">    Strategies.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_algorithm</span>(<span class="params">self, data: <span class="type">List</span></span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Concrete Strategies implement the algorithm while following the base Strategy</span></span><br><span class="line"><span class="string">interface. The interface makes them interchangeable in the Context.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyA</span>(<span class="title class_ inherited__">Strategy</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_algorithm</span>(<span class="params">self, data: <span class="type">List</span></span>) -&gt; <span class="type">List</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sorted</span>(data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConcreteStrategyB</span>(<span class="title class_ inherited__">Strategy</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_algorithm</span>(<span class="params">self, data: <span class="type">List</span></span>) -&gt; <span class="type">List</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">reversed</span>(<span class="built_in">sorted</span>(data))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># The client code picks a concrete strategy and passes it to the context.</span></span><br><span class="line">    <span class="comment"># The client should be aware of the differences between strategies in order</span></span><br><span class="line">    <span class="comment"># to make the right choice.</span></span><br><span class="line"></span><br><span class="line">    context = Context(ConcreteStrategyA())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Client: Strategy is set to normal sorting.&quot;</span>)</span><br><span class="line">    context.do_some_business_logic()</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Client: Strategy is set to reverse sorting.&quot;</span>)</span><br><span class="line">    context.strategy = ConcreteStrategyB()</span><br><span class="line">    context.do_some_business_logic()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
+<h4 id="Output-txt-Execution-result"><a href="#Output-txt-Execution-result" class="headerlink" title="Output.txt: Execution result"></a><strong>Output.txt:</strong> Execution result</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Client: Strategy is set to normal sorting.</span><br><span class="line">Context: Sorting data using the strategy (not sure how it&#x27;ll do it)</span><br><span class="line">a,b,c,d,e</span><br><span class="line"></span><br><span class="line">Client: Strategy is set to reverse sorting.</span><br><span class="line">Context: Sorting data using the strategy (not sure how it&#x27;ll do it)</span><br><span class="line">e,d,c,b,a</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+<h1 id="Strategy-in-Rust"><a href="#Strategy-in-Rust" class="headerlink" title="Strategy in Rust"></a><strong>Strategy</strong> in Rust</h1><p>策略是一种行为设计模式，它将一组行为转换为对象，并使它们在原始上下文对象中可互换。</p>
+<p>原始对象（称为 context）包含对策略对象的引用。将执行行为的上下文委托给链接的策略对象。为了改变上下文执行其工作的方式，其他对象可能会用另一个对象替换当前链接的策略对象。</p>
+<h2 id="Conceptual-Example-概念示例"><a href="#Conceptual-Example-概念示例" class="headerlink" title="Conceptual Example 概念示例"></a>Conceptual Example 概念示例</h2><p>通过特征的概念策略示例。</p>
+<h4 id="conceptual-rs"><a href="#conceptual-rs" class="headerlink" title="conceptual.rs"></a><strong>conceptual.rs</strong></h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// Defines an injectable strategy for building routes.</span></span><br><span class="line"><span class="keyword">trait</span> <span class="title class_">RouteStrategy</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">build_route</span>(&amp;<span class="keyword">self</span>, from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">WalkingStrategy</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">RouteStrategy</span> <span class="keyword">for</span> <span class="title class_">WalkingStrategy</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">build_route</span>(&amp;<span class="keyword">self</span>, from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;Walking route from &#123;&#125; to &#123;&#125;: 4 km, 30 min&quot;</span>, from, to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">PublicTransportStrategy</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">RouteStrategy</span> <span class="keyword">for</span> <span class="title class_">PublicTransportStrategy</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">build_route</span>(&amp;<span class="keyword">self</span>, from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">        <span class="built_in">println!</span>(</span><br><span class="line">            <span class="string">&quot;Public transport route from &#123;&#125; to &#123;&#125;: 3 km, 5 min&quot;</span>,</span><br><span class="line">            from, to</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Navigator</span>&lt;T: RouteStrategy&gt; &#123;</span><br><span class="line">    route_strategy: T,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span>&lt;T: RouteStrategy&gt; Navigator&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(route_strategy: T) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">Self</span> &#123; route_strategy &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">route</span>(&amp;<span class="keyword">self</span>, from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.route_strategy.<span class="title function_ invoke__">build_route</span>(from, to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">navigator</span> = Navigator::<span class="title function_ invoke__">new</span>(WalkingStrategy);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Home&quot;</span>, <span class="string">&quot;Club&quot;</span>);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Club&quot;</span>, <span class="string">&quot;Work&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">navigator</span> = Navigator::<span class="title function_ invoke__">new</span>(PublicTransportStrategy);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Home&quot;</span>, <span class="string">&quot;Club&quot;</span>);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Club&quot;</span>, <span class="string">&quot;Work&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_04_comments/">
+<h3 id="Output-输出"><a href="#Output-输出" class="headerlink" title="Output 输出"></a>Output 输出</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Walking route from Home to Club: 4 km, 30 min</span><br><span class="line">Walking route from Club to Work: 4 km, 30 min</span><br><span class="line">Public transport route from Home to Club: 3 km, 5 min</span><br><span class="line">Public transport route from Club to Work: 3 km, 5 min</span><br></pre></td></tr></table></figure>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
+<h2 id="Functional-approach-功能方法"><a href="#Functional-approach-功能方法" class="headerlink" title="Functional approach 功能方法"></a>Functional approach 功能方法</h2><p>函数和闭包简化了策略实现，因为您可以将行为直接注入到对象中，而无需复杂的接口定义。</p>
+<p>似乎 Strategy 在 Rust 的现代开发中经常被隐式和广泛地使用，例如，它就像迭代器一样工作：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">0i32</span>, <span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">iter</span> = a.<span class="title function_ invoke__">iter</span>().<span class="title function_ invoke__">filter</span>(|x| x.<span class="title function_ invoke__">is_positive</span>());</span><br></pre></td></tr></table></figure>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_03_04_comments/" class="post-title-link" itemprop="url">Ch 03.04:注释(Comments)</a>
-        </h2>
+<h4 id="functional-rs"><a href="#functional-rs" class="headerlink" title="functional.rs"></a><strong>functional.rs</strong></h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">RouteStrategy</span> = <span class="title function_ invoke__">fn</span>(from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">walking_strategy</span>(from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;Walking route from &#123;&#125; to &#123;&#125;: 4 km, 30 min&quot;</span>, from, to);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">public_transport_strategy</span>(from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">    <span class="built_in">println!</span>(</span><br><span class="line">        <span class="string">&quot;Public transport route from &#123;&#125; to &#123;&#125;: 3 km, 5 min&quot;</span>,</span><br><span class="line">        from, to</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Navigator</span> &#123;</span><br><span class="line">    route_strategy: RouteStrategy,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Navigator</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(route_strategy: RouteStrategy) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">Self</span> &#123; route_strategy &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">route</span>(&amp;<span class="keyword">self</span>, from: &amp;<span class="type">str</span>, to: &amp;<span class="type">str</span>) &#123;</span><br><span class="line">        (<span class="keyword">self</span>.route_strategy)(from, to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">navigator</span> = Navigator::<span class="title function_ invoke__">new</span>(walking_strategy);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Home&quot;</span>, <span class="string">&quot;Club&quot;</span>);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Club&quot;</span>, <span class="string">&quot;Work&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">navigator</span> = Navigator::<span class="title function_ invoke__">new</span>(public_transport_strategy);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Home&quot;</span>, <span class="string">&quot;Club&quot;</span>);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Club&quot;</span>, <span class="string">&quot;Work&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">navigator</span> = Navigator::<span class="title function_ invoke__">new</span>(|from, to| <span class="built_in">println!</span>(<span class="string">&quot;Specific route from &#123;&#125; to &#123;&#125;&quot;</span>, from, to));</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Home&quot;</span>, <span class="string">&quot;Club&quot;</span>);</span><br><span class="line">    navigator.<span class="title function_ invoke__">route</span>(<span class="string">&quot;Club&quot;</span>, <span class="string">&quot;Work&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:11:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:11:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>223</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="注释-Comments"><a href="#注释-Comments" class="headerlink" title="注释(Comments)"></a>注释(Comments)</h4><p>所有的程序设计人员努力使他们的代码更容易理解，但是有时候额外的解释是有必要的。在这种情况下程序设计人员在源代码中留下注释(comments)，编译器会忽略这些注释，但是人阅读源码会发现它很有用。</p>
-<p>这里有一个简单的注释例子：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#![allow(unused)]</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line"><span class="comment">// So we’re doing something complicated here, long enough that we need</span></span><br><span class="line"><span class="comment">// multiple lines of comments to do it! Whew! Hopefully, this comment will</span></span><br><span class="line"><span class="comment">// explain what’s going on.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注释可以放在代码行结尾：</p>
-<p>src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">lucky_number</span> = <span class="number">7</span>; <span class="comment">// I’m feeling lucky today</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>但是你经常看到更多是如下的格式，在代码的上方的单独一行注释：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="comment">// I’m feeling lucky today</span></span><br><span class="line">    <span class="keyword">let</span> <span class="variable">lucky_number</span> = <span class="number">7</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Rust 也有其他类型的注释，文档注释(documentation comments)，详细在第14章的”Publishing a Crate to Crates.io” 部分介绍。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2022/12/29/rust_docs/ch_03_03_how_functions_work/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ice">
-      <meta itemprop="description" content="安静地坐着学习">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/29/rust_docs/ch_03_03_how_functions_work/" class="post-title-link" itemprop="url">Ch 03.03:函数(Functions)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-12-29 15:10:00" itemprop="dateCreated datePublished" datetime="2022-12-29T15:10:00+08:00">2022-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-22 10:03:39" itemprop="dateModified" datetime="2023-08-22T10:03:39+08:00">2023-08-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>440</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="函数-Functions"><a href="#函数-Functions" class="headerlink" title="函数(Functions)"></a>函数(Functions)</h4><p>函数在Rust代码中是很普遍的。你已经看了在语言中最重要的函数之一：main函数，是很多程序的入口。你也看到了fn关键字，它允许你声明一个新的函数。</p>
-<p>Rust代码中的函数和变量使用snake case的代码风格，所有的单词小写并用下划线隔开。这里有一个程序包含了一个函数的定义：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#![allow(unused)]</span><br><span class="line">fn main() &#123;</span><br><span class="line">let x = 5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其次，five函数没有参数并定义了返回值类型，不过函数体只有单单一个5，因为它是一个表达式，可以返回我们想要的值。</p>
-<p>让我们看看另外一个例子：</p>
-<p>src&#x2F;main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="title function_ invoke__">plus_one</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The value of x is: &#123;&#125;&quot;</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">plus_one</span>(x: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    x + <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译这段代码，会产生一个如下的错误：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> cargo run</span><br><span class="line">   Compiling functions v0.<span class="number">1.0</span> (file:///projects/functions)</span><br><span class="line">error[<span class="type">E0308</span>]: mismatched types</span><br><span class="line"> <span class="literal">--</span>&gt; src/main.rs:<span class="number">7</span>:<span class="number">24</span></span><br><span class="line">  |</span><br><span class="line"><span class="number">7</span> | fn plus_one(x: i32) -&gt; i32 &#123;</span><br><span class="line">  |    <span class="literal">--------</span>            ^^^ expected `i32`, found `()`</span><br><span class="line">  |    |</span><br><span class="line">  |    implicitly returns `()` as its body has no tail or `return` expression</span><br><span class="line"><span class="number">8</span> |     x + <span class="number">1</span>;</span><br><span class="line">  |          - help: consider removing this semicolon</span><br><span class="line"></span><br><span class="line"><span class="keyword">For</span> more information about this error, <span class="keyword">try</span> `rustc <span class="literal">--explain</span> E0308`.</span><br><span class="line">error: could not compile `functions` due to previous error</span><br></pre></td></tr></table></figure>
-
-<p>主要的错误信息”mismatched types”揭示了这段代码的核心问题所在。定义函数plus_one，然后说要返回一个i32，但是语句不会计算得到一个值，使用单位类型()表示不返回值。因为不返回值与函数返回一个i32类型的值矛盾，从而出现一个错误。在输出中，Rust提供了一条信息，可能有助于纠正这个错误：它建议删除分号，这会修复这个错误。</p>
-<p>正确的代码如下：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="variable">x</span> = <span class="title function_ invoke__">plus_one</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The value of x is: &#123;&#125;&quot;</span>, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">plus_one</span>(x: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    x + <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="Output-输出-1"><a href="#Output-输出-1" class="headerlink" title="Output 输出"></a>Output 输出</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Walking route from Home to Club: 4 km, 30 min</span><br><span class="line">Walking route from Club to Work: 4 km, 30 min</span><br><span class="line">Public transport route from Home to Club: 3 km, 5 min</span><br><span class="line">Public transport route from Club to Work: 3 km, 5 min</span><br><span class="line">Specific route from Home to Club</span><br><span class="line">Specific route from Club to Work</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1129,7 +387,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/88/">88</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1195,20 +453,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">88</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1249,7 +507,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1258,12 +516,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">92k</span>
+    <span title="Symbols count total">175k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:36</span>
+    <span title="Reading time total">10:35</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>

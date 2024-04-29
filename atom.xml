@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2023-12-04T10:23:35.189Z</updated>
+  <updated>2024-04-29T03:45:08.187Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,39 +17,274 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>maydat-lip-syncing</title>
-    <link href="https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/"/>
-    <id>https://tonymistark.github.io/2023/12/04/mayday-lip-syncing/</id>
-    <published>2023-12-04T10:04:22.000Z</published>
-    <updated>2023-12-04T10:23:35.189Z</updated>
+    <title>计算边长200以内的直角三角形有那些？</title>
+    <link href="https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/"/>
+    <id>https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/</id>
+    <published>2024-04-29T03:44:51.000Z</published>
+    <updated>2024-04-29T03:45:08.187Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;今日单词&quot;&gt;&lt;a href=&quot;#今日单词&quot; class=&quot;headerlink&quot; title=&quot;今日单词&quot;&gt;&lt;/a&gt;今日单词&lt;/h3&gt;&lt;div align=&quot;center&quot;&gt; &lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;计算边长200以内的直角三角形有那些？用python，java，go，rust，haskell，c，c-实现&quot;&gt;&lt;a href=&quot;#计算边长200以内的直角三角形有那些？用python，java，go，rust，haskell，c，c-实现&quot;</summary>
         
       
     
     
+    
+    <category term="algorithm" scheme="https://tonymistark.github.io/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://tonymistark.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过重视注释和代码来减少技术债务</title>
+    <link href="https://tonymistark.github.io/2024/04/27/design-pattern/java-comments-reduce-technical-debt/"/>
+    <id>https://tonymistark.github.io/2024/04/27/design-pattern/java-comments-reduce-technical-debt/</id>
+    <published>2024-04-27T05:37:14.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;通过重视注释和代码来减少技术债务&quot;&gt;&lt;a href=&quot;#通过重视注释和代码来减少技术债务&quot; class=&quot;headerlink&quot; title=&quot;通过重视注释和代码来减少技术债务&quot;&gt;&lt;/a&gt;通过重视注释和代码来减少技术债务&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
     
     
   </entry>
   
   <entry>
-    <title>Adapter</title>
-    <link href="https://tonymistark.github.io/2023/12/03/design-pattern/adapter/"/>
-    <id>https://tonymistark.github.io/2023/12/03/design-pattern/adapter/</id>
-    <published>2023-12-03T08:03:51.000Z</published>
-    <updated>2023-12-04T10:02:54.618Z</updated>
+    <title>探索大型语言模型的世界</title>
+    <link href="https://tonymistark.github.io/2024/04/27/design-pattern/navigating-the-world-of-large-language-models/"/>
+    <id>https://tonymistark.github.io/2024/04/27/design-pattern/navigating-the-world-of-large-language-models/</id>
+    <published>2024-04-27T03:27:15.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter 适配器&quot;&gt;&lt;/a&gt;Adapter 适配器&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h4 id=&quot;探索大型语言模型的世界&quot;&gt;&lt;a href=&quot;#探索大型语言模型的世界&quot; class=&quot;headerlink&quot; title=&quot;探索大型语言模型的世界&quot;&gt;&lt;/a&gt;探索大型语言模型的世界&lt;/h4&gt;&lt;p&gt;&lt;em&gt;2024年3月21日，由Sherlock</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Visitor 访问者模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/visitor/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/visitor/</id>
+    <published>2024-04-21T06:38:18.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot; title=&quot;Intent 意图&quot;&gt;&lt;/a&gt;Intent 意图&lt;/h2&gt;&lt;p&gt;Visitor</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Template Method 模版方法模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/template-method/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/template-method/</id>
+    <published>2024-04-21T06:12:56.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Strategy 策略模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/strategy/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/strategy/</id>
+    <published>2024-04-21T05:43:14.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>State 状态模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/state/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/state/</id>
+    <published>2024-04-21T04:54:21.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Observer 观察者模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/observer/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/observer/</id>
+    <published>2024-04-21T02:53:27.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;也称为：Event-Subscriber、Listener&lt;/p&gt;
+&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Memento 备忘录模式</title>
+    <link href="https://tonymistark.github.io/2024/04/21/design-pattern/memento/"/>
+    <id>https://tonymistark.github.io/2024/04/21/design-pattern/memento/</id>
+    <published>2024-04-21T01:59:34.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot; title=&quot;Intent 意图&quot;&gt;&lt;/a&gt;Intent 意图&lt;/h2&gt;&lt;p&gt;Memento</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mediator 中介者模式</title>
+    <link href="https://tonymistark.github.io/2024/04/20/design-pattern/mediator/"/>
+    <id>https://tonymistark.github.io/2024/04/20/design-pattern/mediator/</id>
+    <published>2024-04-20T04:33:40.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iterator 迭代器模式</title>
+    <link href="https://tonymistark.github.io/2024/02/19/design-pattern/iterator/"/>
+    <id>https://tonymistark.github.io/2024/02/19/design-pattern/iterator/</id>
+    <published>2024-02-19T14:43:15.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a href=&quot;#Intent-意图&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Command 命令</title>
+    <link href="https://tonymistark.github.io/2024/02/05/design-pattern/command/"/>
+    <id>https://tonymistark.github.io/2024/02/05/design-pattern/command/</id>
+    <published>2024-02-05T13:36:28.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -63,181 +298,18 @@
   </entry>
   
   <entry>
-    <title>财富创造机制目录</title>
-    <link href="https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms-translate/"/>
-    <id>https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms-translate/</id>
-    <published>2023-12-01T10:07:58.000Z</published>
-    <updated>2023-12-01T10:08:43.629Z</updated>
+    <title>Chain of Responsibility 责任链</title>
+    <link href="https://tonymistark.github.io/2024/02/03/design-pattern/chain-of-responsibility/"/>
+    <id>https://tonymistark.github.io/2024/02/03/design-pattern/chain-of-responsibility/</id>
+    <published>2024-02-03T05:49:38.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;A-catalog-of-wealth-creation-mechanisms-财富创造机制目录&quot;&gt;&lt;a href=&quot;#A-catalog-of-wealth-creation-mechanisms-财富创造机制目录&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>财富创造机制清单</title>
-    <link href="https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms/"/>
-    <id>https://tonymistark.github.io/2023/12/01/a-catalog-of-wealth-creation-mmechanisms/</id>
-    <published>2023-12-01T09:27:10.000Z</published>
-    <updated>2023-12-01T09:38:31.233Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天读到一篇关于&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Henry A.Kissinger 1923 – 2023</title>
-    <link href="https://tonymistark.github.io/2023/11/29/kissinger-1923-2023/"/>
-    <id>https://tonymistark.github.io/2023/11/29/kissinger-1923-2023/</id>
-    <published>2023-11-29T03:11:20.000Z</published>
-    <updated>2023-12-01T03:37:23.008Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Henry-A-Kissinger-1923-–-2023&quot;&gt;&lt;a href=&quot;#Henry-A-Kissinger-1923-–-2023&quot; class=&quot;headerlink&quot; title=&quot;Henry A.Kissinger 1923 –</summary>
-        
-      
-    
-    
-    
-    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
-    
-    
-    <category term="历史事件" scheme="https://tonymistark.github.io/tags/%E5%8E%86%E5%8F%B2%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者</title>
-    <link href="https://tonymistark.github.io/2023/11/28/Remembering-Charlie-Munger/"/>
-    <id>https://tonymistark.github.io/2023/11/28/Remembering-Charlie-Munger/</id>
-    <published>2023-11-28T04:14:30.000Z</published>
-    <updated>2023-12-01T03:38:07.875Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot;&gt;&lt;a href=&quot;#伯克希尔·哈撒韦公司悼念查理·芒格：致敬一位伟大的领导者&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="writing" scheme="https://tonymistark.github.io/categories/writing/"/>
-    
-    
-    <category term="随想" scheme="https://tonymistark.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>山姆 奥特曼的野心</title>
-    <link href="https://tonymistark.github.io/2023/11/27/sam_altman/Successful-people/"/>
-    <id>https://tonymistark.github.io/2023/11/27/sam_altman/Successful-people/</id>
-    <published>2023-11-27T07:25:19.000Z</published>
-    <updated>2023-12-01T03:34:08.624Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Successful-people-成功人士&quot;&gt;&lt;a href=&quot;#Successful-people-成功人士&quot; class=&quot;headerlink&quot; title=&quot;Successful people 成功人士&quot;&gt;&lt;/a&gt;Successful people</summary>
-        
-      
-    
-    
-    
-    <category term="sam_altman" scheme="https://tonymistark.github.io/categories/sam-altman/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Creational Design Patterns</title>
-    <link href="https://tonymistark.github.io/2023/11/26/design-pattern/Creational-Design-Patterns/"/>
-    <id>https://tonymistark.github.io/2023/11/26/design-pattern/Creational-Design-Patterns/</id>
-    <published>2023-11-26T13:50:49.000Z</published>
-    <updated>2023-12-01T03:33:32.081Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Creational-Design-Patterns-创建设计模式&quot;&gt;&lt;a href=&quot;#Creational-Design-Patterns-创建设计模式&quot; class=&quot;headerlink&quot; title=&quot;Creational Design</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Growth and Government</title>
-    <link href="https://tonymistark.github.io/2023/11/24/sam_altman/growth-and-government/"/>
-    <id>https://tonymistark.github.io/2023/11/24/sam_altman/growth-and-government/</id>
-    <published>2023-11-24T03:29:07.000Z</published>
-    <updated>2023-11-24T03:45:39.137Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这是一篇11年前于2013年3月5日,山姆</summary>
-        
-      
-    
-    
-    
-    <category term="sam_altman" scheme="https://tonymistark.github.io/categories/sam-altman/"/>
-    
-    
-    <category term="sam altman" scheme="https://tonymistark.github.io/tags/sam-altman/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Singleton</title>
-    <link href="https://tonymistark.github.io/2023/11/23/design-pattern/singleton/"/>
-    <id>https://tonymistark.github.io/2023/11/23/design-pattern/singleton/</id>
-    <published>2023-11-23T13:08:58.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Singleton-单例模式&quot;&gt;&lt;a href=&quot;#Singleton-单例模式&quot; class=&quot;headerlink&quot; title=&quot;Singleton 单例模式&quot;&gt;&lt;/a&gt;Singleton 单例模式&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot; title=&quot;意图&quot;&gt;&lt;/a&gt;意图&lt;/h2&gt;&lt;p&gt;Chain of</summary>
         
       
     
@@ -251,18 +323,19 @@
   </entry>
   
   <entry>
-    <title>Prototype</title>
-    <link href="https://tonymistark.github.io/2023/11/22/design-pattern/prototype/"/>
-    <id>https://tonymistark.github.io/2023/11/22/design-pattern/prototype/</id>
-    <published>2023-11-22T13:10:02.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
+    <title>Structural Design Patterns 结构设计模式</title>
+    <link href="https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/"/>
+    <id>https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/</id>
+    <published>2024-02-01T14:27:04.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Prototype-原型&quot;&gt;&lt;a href=&quot;#Prototype-原型&quot; class=&quot;headerlink&quot; title=&quot;Prototype 原型&quot;&gt;&lt;/a&gt;Prototype 原型&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;结构设计模式解释了如何将对象和类组装成更大的结构，同时保持这些结构的灵活性和效率。&lt;/p&gt;
+&lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter</summary>
         
       
     
@@ -274,43 +347,18 @@
   </entry>
   
   <entry>
-    <title>Builder</title>
-    <link href="https://tonymistark.github.io/2023/11/21/design-pattern/builder/"/>
-    <id>https://tonymistark.github.io/2023/11/21/design-pattern/builder/</id>
-    <published>2023-11-21T12:42:48.000Z</published>
-    <updated>2023-11-24T03:24:27.966Z</updated>
+    <title>Proxy 代理模式</title>
+    <link href="https://tonymistark.github.io/2024/02/01/design-pattern/proxy/"/>
+    <id>https://tonymistark.github.io/2024/02/01/design-pattern/proxy/</id>
+    <published>2024-02-01T13:50:38.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Builder-建造者&quot;&gt;&lt;a href=&quot;#Builder-建造者&quot; class=&quot;headerlink&quot; title=&quot;Builder 建造者&quot;&gt;&lt;/a&gt;Builder 建造者&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Abstract Factory</title>
-    <link href="https://tonymistark.github.io/2023/11/20/design-pattern/abstract-factory/"/>
-    <id>https://tonymistark.github.io/2023/11/20/design-pattern/abstract-factory/</id>
-    <published>2023-11-20T12:16:29.000Z</published>
-    <updated>2023-11-24T03:24:27.966Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Abstract-Factory-抽象工厂&quot;&gt;&lt;a href=&quot;#Abstract-Factory-抽象工厂&quot; class=&quot;headerlink&quot; title=&quot;Abstract Factory 抽象工厂&quot;&gt;&lt;/a&gt;Abstract Factory</summary>
+    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -319,23 +367,21 @@
     <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
     
     
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
   </entry>
   
   <entry>
-    <title>Factory Method</title>
-    <link href="https://tonymistark.github.io/2023/11/16/design-pattern/factory-method/"/>
-    <id>https://tonymistark.github.io/2023/11/16/design-pattern/factory-method/</id>
-    <published>2023-11-16T13:02:09.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
+    <title>Flyweight 享元模式</title>
+    <link href="https://tonymistark.github.io/2024/01/30/design-pattern/flyweight/"/>
+    <id>https://tonymistark.github.io/2024/01/30/design-pattern/flyweight/</id>
+    <published>2024-01-30T13:55:21.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Factory-Method&quot;&gt;&lt;a href=&quot;#Factory-Method&quot; class=&quot;headerlink&quot; title=&quot;Factory Method&quot;&gt;&lt;/a&gt;Factory Method&lt;/h1&gt;&lt;h1 id=&quot;工厂方法&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -349,18 +395,42 @@
   </entry>
   
   <entry>
-    <title>classification of patterns</title>
-    <link href="https://tonymistark.github.io/2023/11/15/design-pattern/classification-of-patterns/"/>
-    <id>https://tonymistark.github.io/2023/11/15/design-pattern/classification-of-patterns/</id>
-    <published>2023-11-15T15:02:50.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
+    <title>Facade 门面（外观）模式</title>
+    <link href="https://tonymistark.github.io/2024/01/29/design-pattern/facade/"/>
+    <id>https://tonymistark.github.io/2024/01/29/design-pattern/facade/</id>
+    <published>2024-01-29T14:15:32.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Classification-of-patterns&quot;&gt;&lt;a href=&quot;#Classification-of-patterns&quot; class=&quot;headerlink&quot; title=&quot;Classification of</summary>
+    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot; title=&quot;意图&quot;&gt;&lt;/a&gt;意图&lt;/h2&gt;&lt;p&gt;Facade是一种结构化设计模式，它为库、框架或任何其他复杂的类集提供了一个简化的接口。&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Decorator 装饰器模式</title>
+    <link href="https://tonymistark.github.io/2024/01/28/design-pattern/decorator/"/>
+    <id>https://tonymistark.github.io/2024/01/28/design-pattern/decorator/</id>
+    <published>2024-01-28T05:26:52.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Decorator-装饰器模式&quot;&gt;&lt;a href=&quot;#Decorator-装饰器模式&quot; class=&quot;headerlink&quot; title=&quot;Decorator 装饰器模式&quot;&gt;&lt;/a&gt;Decorator 装饰器模式&lt;/h1&gt;&lt;h2</summary>
         
       
     
@@ -374,43 +444,18 @@
   </entry>
   
   <entry>
-    <title>Why should I learn patterns?</title>
-    <link href="https://tonymistark.github.io/2023/11/15/design-pattern/why-should-i-learn-patterns/"/>
-    <id>https://tonymistark.github.io/2023/11/15/design-pattern/why-should-i-learn-patterns/</id>
-    <published>2023-11-15T11:54:40.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
+    <title>Composite 部分-整体模式</title>
+    <link href="https://tonymistark.github.io/2023/12/07/design-pattern/composite/"/>
+    <id>https://tonymistark.github.io/2023/12/07/design-pattern/composite/</id>
+    <published>2023-12-07T13:52:43.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Why-should-I-learn-patterns&quot;&gt;&lt;a href=&quot;#Why-should-I-learn-patterns&quot; class=&quot;headerlink&quot; title=&quot;Why should I learn patterns?&quot;&gt;&lt;/a&gt;Why</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>History of patterns</title>
-    <link href="https://tonymistark.github.io/2023/11/14/design-pattern/history-of-patterns/"/>
-    <id>https://tonymistark.github.io/2023/11/14/design-pattern/history-of-patterns/</id>
-    <published>2023-11-14T12:53:45.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;History-of-patterns&quot;&gt;&lt;a href=&quot;#History-of-patterns&quot; class=&quot;headerlink&quot; title=&quot;History of patterns&quot;&gt;&lt;/a&gt;History of patterns&lt;/h1&gt;&lt;h1</summary>
+    <summary type="html">&lt;h1 id=&quot;Composite-部分-整体模式&quot;&gt;&lt;a href=&quot;#Composite-部分-整体模式&quot; class=&quot;headerlink&quot; title=&quot;Composite 部分-整体模式&quot;&gt;&lt;/a&gt;Composite 部分-整体模式&lt;/h1&gt;&lt;p&gt;Also</summary>
         
       
     
@@ -424,18 +469,18 @@
   </entry>
   
   <entry>
-    <title>What&#39;s a design pattern?</title>
-    <link href="https://tonymistark.github.io/2023/11/09/design-pattern/what-is-a-design-pattern/"/>
-    <id>https://tonymistark.github.io/2023/11/09/design-pattern/what-is-a-design-pattern/</id>
-    <published>2023-11-09T14:18:59.000Z</published>
-    <updated>2023-11-24T03:24:27.970Z</updated>
+    <title>Bridge</title>
+    <link href="https://tonymistark.github.io/2023/12/06/design-pattern/bridge/"/>
+    <id>https://tonymistark.github.io/2023/12/06/design-pattern/bridge/</id>
+    <published>2023-12-06T13:36:04.000Z</published>
+    <updated>2024-04-29T03:33:27.917Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;What’s-a-design-pattern&quot;&gt;&lt;a href=&quot;#What’s-a-design-pattern&quot; class=&quot;headerlink&quot; title=&quot;What’s a design pattern?&quot;&gt;&lt;/a&gt;What’s a design</summary>
+    <summary type="html">&lt;h1 id=&quot;Bridge-桥接模式&quot;&gt;&lt;a href=&quot;#Bridge-桥接模式&quot; class=&quot;headerlink&quot; title=&quot;Bridge 桥接模式&quot;&gt;&lt;/a&gt;Bridge 桥接模式&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
         
       
     
@@ -445,53 +490,6 @@
     
     
     <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一键部署 Ollama在本地启动并运行大语言模型</title>
-    <link href="https://tonymistark.github.io/2023/11/02/Ollama-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
-    <id>https://tonymistark.github.io/2023/11/02/Ollama-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E5%B9%B6%E8%BF%90%E8%A1%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</id>
-    <published>2023-11-02T07:13:38.000Z</published>
-    <updated>2023-11-02T07:21:35.694Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>I am Grinding King</title>
-    <link href="https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/"/>
-    <id>https://tonymistark.github.io/2023/11/01/I-am-Grinding-King/</id>
-    <published>2023-11-01T10:22:41.000Z</published>
-    <updated>2023-11-01T11:05:32.618Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Ice:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;你理解在中文里面“卷”的特别的意思吗？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Claude:&lt;/strong&gt;&lt;/em</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
