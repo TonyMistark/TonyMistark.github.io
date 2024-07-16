@@ -1,3 +1,4 @@
+https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/
 https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/
 https://tonymistark.github.io/2023/12/06/design-pattern/bridge/
 https://tonymistark.github.io/2024/02/03/design-pattern/chain-of-responsibility/

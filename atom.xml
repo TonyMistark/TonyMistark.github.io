@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2024-04-29T03:45:08.187Z</updated>
+  <updated>2024-07-16T03:28:22.053Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Overloading And Overriding</title>
+    <link href="https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/"/>
+    <id>https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/</id>
+    <published>2024-07-16T03:20:09.000Z</published>
+    <updated>2024-07-16T03:28:22.053Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;重载和重写在面向对象编程中有什么区别&quot;&gt;&lt;a href=&quot;#重载和重写在面向对象编程中有什么区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://tonymistark.github.io/categories/notes/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>计算边长200以内的直角三角形有那些？</title>
     <link href="https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/"/>
     <id>https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/</id>
     <published>2024-04-29T03:44:51.000Z</published>
-    <updated>2024-04-29T03:45:08.187Z</updated>
+    <updated>2024-04-29T08:40:39.452Z</updated>
     
     
       
@@ -456,31 +479,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Composite-部分-整体模式&quot;&gt;&lt;a href=&quot;#Composite-部分-整体模式&quot; class=&quot;headerlink&quot; title=&quot;Composite 部分-整体模式&quot;&gt;&lt;/a&gt;Composite 部分-整体模式&lt;/h1&gt;&lt;p&gt;Also</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bridge</title>
-    <link href="https://tonymistark.github.io/2023/12/06/design-pattern/bridge/"/>
-    <id>https://tonymistark.github.io/2023/12/06/design-pattern/bridge/</id>
-    <published>2023-12-06T13:36:04.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Bridge-桥接模式&quot;&gt;&lt;a href=&quot;#Bridge-桥接模式&quot; class=&quot;headerlink&quot; title=&quot;Bridge 桥接模式&quot;&gt;&lt;/a&gt;Bridge 桥接模式&lt;/h1&gt;&lt;h2 id=&quot;Intent-意图&quot;&gt;&lt;a</summary>
         
       
     
