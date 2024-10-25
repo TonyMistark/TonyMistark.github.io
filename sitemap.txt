@@ -1,3 +1,4 @@
+https://tonymistark.github.io/2024/04/21/design-pattern/state/
 https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/
 https://tonymistark.github.io/2024/04/29/algorithm/algorithm_count_right-angled-triangles/
 https://tonymistark.github.io/2023/12/06/design-pattern/bridge/
@@ -14,7 +15,6 @@ https://tonymistark.github.io/2024/04/21/design-pattern/memento/
 https://tonymistark.github.io/2024/04/27/design-pattern/navigating-the-world-of-large-language-models/
 https://tonymistark.github.io/2024/04/21/design-pattern/observer/
 https://tonymistark.github.io/2024/02/01/design-pattern/proxy/
-https://tonymistark.github.io/2024/04/21/design-pattern/state/
 https://tonymistark.github.io/2024/04/21/design-pattern/strategy/
 https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/
 https://tonymistark.github.io/2024/04/21/design-pattern/template-method/
