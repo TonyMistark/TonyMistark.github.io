@@ -23,10 +23,10 @@ date: 2024-04-21 12:54:21
 
 主要思想是，在任何给定的时刻，程序可以处于的状态数量是有限的。在任何唯一状态下，程序的行为都不同，程序可以立即从一种状态切换到另一种状态。但是，根据当前状态，程序可能会也可能不会切换到某些其他状态。这些切换规则（称为转换）也是有限的和预先确定的。
 
-您也可以将此方法应用于对象。想象一下，我们有一个 您也可以将此方法应用于对象。想象一下，我们有一个 `Document` 类。文档可以处于以下三种状态之一： `Draft`、`Moderation`和`Published` 。`Document`的`publish` 方法在每种状态下的工作方式略有不同： 
-- 在中在中 `Draft` ，它会将文档移动到审核状态。
-- 在中在中 `Moderation` ，它使文档公开，但前提是当前用户是管理员。
-- 在`Published` 中，它根本不做任何事情。
+您也可以将此方法应用于对象。想象一下，我们有一个 您也可以将此方法应用于对象。想象一下，我们有一个 `Document` 类。文档可以处于以下三种状态之一： `Draft`、`Moderation` 和 `Published` 。`publish` 方法在每种状态下的工作方式略有不同： 
+- 在`Draft`中，它会将文档移动到审核状态。
+- 在`Moderation`中，它使文档公开，但前提是当前用户是管理员。
+- 在`Published`中，它根本不做任何事情。
 
 <div align="center"> <img src="/images/state-problem2.png"/><p style="text-align: center;">文档对象的可能状态和转换。</p></div>
 
@@ -95,7 +95,7 @@ class Document is
 <div align="center"> <img src="/images/state-example.png"/><p style="text-align: center;"></p>使用状态对象更改对象行为的示例。</div>
 
 
-播放器的主要对象始终链接到为播放器执行大部分工作的状态对象。某些操作会将玩家的当前状态对象替换为另一个操作，这会更改玩家对用户交互的反应方式。
+播放器的主要对象始终与一个状态对象相链接，该状态对象执行播放器的大部分工作。一些动作会将播放器当前的状态对象替换为另一个，这改变了播放器对用户交互的反应方式。
 
 ```java
 // The AudioPlayer class acts as a context. It also maintains a
@@ -423,7 +423,7 @@ pub trait State {
 }
 ```
 
-`next` 并且  并且  并且 `prev` 不要更改状态，在单独的  不要更改状态，在单独的  不要更改状态，在单独的 `impl dyn State` 块中存在无法覆盖的默认实现。 块中存在无法覆盖的默认实现。
+`next` 和 `prev` 不会改变状态，它们在一个单独的 `impl dyn State` 块中有默认实现，无法被重写。
 
 ```rust
 impl dyn State {
@@ -461,7 +461,7 @@ let state = state.play(&mut player);  // StoppedState -> PlayingState.
 let state = state.play(&mut player);  // PlayingState -> PausedState.
 ```
 
-在这里，相同的操作 在这里，相同的操作 `play` 会根据调用位置转换到不同的状态： 会根据调用位置转换到不同的状态：
+在这里，相同的操作 `play` 会根据调用位置转换到不同的状态：
 
 1. `StoppedState` `play` 的实现开始播放并返回 `PlayingState` 。
 
@@ -491,8 +491,8 @@ let state = state.play(&mut player);  // PlayingState -> PausedState.
 
 为什么？
 
-1. 首先， `self` 不是参考，它意味着该方法是“一次性”，它消耗 `self` 并交换到另一个状态返回 `Box<dyn State>` 。
-2. 其次，该方法使用盒装对象 like `Box<dyn State>` 而不是具体类型的对象 `PlayingState` ，因为具体状态在编译时是未知的。
+1. 首先， `self` 不是引用，它意味着该方法是“一次性”，它销毁 `self` 并交换到另一个状态返回 `Box<dyn State>` 。
+2. 其次，该方法使用`Box`对象 `Box<dyn State>` 而不是具体类型的对象 `PlayingState` ，因为具体状态在编译时是未知的。
 
 #### **player.rs**
 
