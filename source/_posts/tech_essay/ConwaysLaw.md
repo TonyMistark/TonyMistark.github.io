@@ -1,5 +1,7 @@
 ---
 title: 康威定律
+categories:
+  - tech_essay
 date: 2024-04-27 17:46:50
 ---
 

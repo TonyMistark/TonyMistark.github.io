@@ -1,5 +1,7 @@
 ---
 title: 康威定律
+categories:
+  - design-pattern
 date: 2024-04-27 17:43:21
 ---
 

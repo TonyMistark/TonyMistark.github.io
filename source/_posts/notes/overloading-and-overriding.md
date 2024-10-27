@@ -1,8 +1,11 @@
 ---
-title: Overloading And Overriding
+title: 'Overloading Or Overriding, That is a Question'
+categories:
+  - notes
 date: 2024-07-16 11:20:09
 tags:
 ---
+## Overloading Or Overriding, That is a Question
 
 ### 重载和重写在面向对象编程中有什么区别?
 
