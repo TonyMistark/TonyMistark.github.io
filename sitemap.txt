@@ -1,3 +1,4 @@
+https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/
 https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/
 https://tonymistark.github.io/2024/04/27/tech_essay/ConwaysLaw/
 https://tonymistark.github.io/2024/09/22/tech_essay/O0/
@@ -115,4 +116,5 @@ https://tonymistark.github.io/categories/sam-altman/
 https://tonymistark.github.io/categories/Rust/
 https://tonymistark.github.io/categories/algorithm/
 https://tonymistark.github.io/categories/tech-essay/
+https://tonymistark.github.io/categories/python/
 

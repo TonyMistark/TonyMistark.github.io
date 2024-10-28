@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/</loc>
+    
+    <lastmod>2024-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/</loc>
     
     <lastmod>2024-10-28</lastmod>
@@ -1013,6 +1022,13 @@
   
   <url>
     <loc>https://tonymistark.github.io/categories/tech-essay/</loc>
+    <lastmod>2024-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tonymistark.github.io/categories/python/</loc>
     <lastmod>2024-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

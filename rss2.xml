@@ -15,8 +15,34 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Mon, 28 Oct 2024 09:27:20 GMT</pubDate>
+    <pubDate>Mon, 28 Oct 2024 11:04:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>详解：python中的with</title>
+      <link>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/</link>
+      <guid>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/</guid>
+      <pubDate>Mon, 28 Oct 2024 10:49:46 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;详解: python中的with&lt;br&gt;一、基本概念与语法结构&lt;br&gt;在Python中，with语句是一种用于简化资源管理的控制流语句，它的语法结构如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://tonymistark.github.io/categories/python/">python</category>
+      
+      
+      
+      <comments>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Rust所有权系统：深入剖析</title>
@@ -496,31 +522,6 @@
       
       
       <comments>https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Proxy 代理模式</title>
-      <link>https://tonymistark.github.io/2024/02/01/design-pattern/proxy/</link>
-      <guid>https://tonymistark.github.io/2024/02/01/design-pattern/proxy/</guid>
-      <pubDate>Thu, 01 Feb 2024 13:50:38 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://tonymistark.github.io/categories/design-pattern/">design-pattern</category>
-      
-      
-      
-      <comments>https://tonymistark.github.io/2024/02/01/design-pattern/proxy/#disqus_thread</comments>
       
     </item>
     

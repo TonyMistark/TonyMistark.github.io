@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2024-10-28T09:27:20.738Z</updated>
+  <updated>2024-10-28T11:04:04.367Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>详解：python中的with</title>
+    <link href="https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/"/>
+    <id>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/</id>
+    <published>2024-10-28T10:49:46.000Z</published>
+    <updated>2024-10-28T11:04:04.367Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;详解: python中的with&lt;br&gt;一、基本概念与语法结构&lt;br&gt;在Python中，with语句是一种用于简化资源管理的控制流语句，它的语法结构如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="https://tonymistark.github.io/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Rust所有权系统：深入剖析</title>
@@ -449,29 +473,6 @@
         
     <summary type="html">&lt;p&gt;结构设计模式解释了如何将对象和类组装成更大的结构，同时保持这些结构的灵活性和效率。&lt;/p&gt;
 &lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Proxy 代理模式</title>
-    <link href="https://tonymistark.github.io/2024/02/01/design-pattern/proxy/"/>
-    <id>https://tonymistark.github.io/2024/02/01/design-pattern/proxy/</id>
-    <published>2024-02-01T13:50:38.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</summary>
         
       
     
