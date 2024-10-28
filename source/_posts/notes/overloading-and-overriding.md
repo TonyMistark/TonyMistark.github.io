@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
-title: 'Overloading Or Overriding, That is a Question'
-=======
 title: Overloading And Overriding
->>>>>>> 5225dc3e12ba940b4017fa74f68d2745591fa800
 categories:
   - notes
 date: 2024-07-16 11:20:09
