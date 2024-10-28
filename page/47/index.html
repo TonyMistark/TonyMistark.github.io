@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/08/29/ubuntu20-04-ubuntu22-04-%E5%AE%89%E8%A3%85%EF%BC%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+    <link itemprop="mainEntityOfPage" href="https://tonymistark.github.io/2023/10/20/should_I_support_Israel_or_Palestine/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -197,7 +197,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/08/29/ubuntu20-04-ubuntu22-04-%E5%AE%89%E8%A3%85%EF%BC%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-title-link" itemprop="url">ubuntu20.04/ubuntu22.04 安装，环境配置遇到的问题以及解决方案</a>
+            <a href="/2023/10/20/should_I_support_Israel_or_Palestine/" class="post-title-link" itemprop="url">我应该支持以色列还是巴勒斯坦？</a>
         </h2>
 
         <div class="post-meta">
@@ -208,7 +208,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-08-29 14:48:08 / Modified: 14:50:26" itemprop="dateCreated datePublished" datetime="2023-08-29T14:48:08+08:00">2023-08-29</time>
+              <time title="Created: 2023-10-20 11:11:20 / Modified: 19:09:18" itemprop="dateCreated datePublished" datetime="2023-10-20T11:11:20+08:00">2023-10-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,7 +216,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a>
+                  <a href="/categories/writing/" itemprop="url" rel="index"><span itemprop="name">writing</span></a>
                 </span>
             </span>
 
@@ -226,14 +226,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>916</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>6 mins.</span>
             </span>
 
         </div>
@@ -245,41 +245,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="build-a-python-env-on-ubuntu20-04"><a href="#build-a-python-env-on-ubuntu20-04" class="headerlink" title="build a python env on ubuntu20.04"></a>build a python env on ubuntu20.04</h3><h4 id="fix-virtualenvwarpper"><a href="#fix-virtualenvwarpper" class="headerlink" title="fix virtualenvwarpper"></a>fix virtualenvwarpper</h4><p>(Ubuntu20.04安装virtualenv方法以及安装过程中遇到的问题处理)[<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42296146/article/details/108291436]">https://blog.csdn.net/qq_42296146/article/details/108291436]</a></p>
-<p>问题：bash: &#x2F;usr&#x2F;local&#x2F;bin&#x2F;virtualenvwrapper.sh: No such file or directory</p>
-<p>ubuntu18及以上版本，virtualenvwrapper.sh被安装到了家目录下的.local&#x2F;bin&#x2F;中，非原来的&#x2F;usr&#x2F;local&#x2F;bin&#x2F;中</p>
-<p>&#x2F;usr&#x2F;share&#x2F;virtualenvwrapper&#x2F;virtualenvwrapper.sh 实际安装的位置，只要把这个地址配置到.brashrc之后就可以正常运行了。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export WORKON_HOME=$HOME/.virtualenvs</span><br><span class="line">export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.10</span><br><span class="line">export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv</span><br><span class="line">source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
-<h4 id="install-a-local-git-repo-updata"><a href="#install-a-local-git-repo-updata" class="headerlink" title="install a local git repo updata"></a>install a local git repo updata</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@bitbucket.org:ginolegaltech/updata.git</span><br><span class="line">$ cd updata</span><br><span class="line">&amp; python3.10 setup.py install</span><br><span class="line">$ rm -rf build/</span><br><span class="line">$ rm -rf updata.egg-info/</span><br></pre></td></tr></table></figure>
-
-<h5 id="fix-ImportError-cannot-import-name-‘html5lib’-from-‘pip-vendor’-home-ice-virtualenvs-310-lib-python3-10-site-packages-pip-vendor-init-py"><a href="#fix-ImportError-cannot-import-name-‘html5lib’-from-‘pip-vendor’-home-ice-virtualenvs-310-lib-python3-10-site-packages-pip-vendor-init-py" class="headerlink" title="fix ImportError: cannot import name ‘html5lib’ from ‘pip._vendor’ (&#x2F;home&#x2F;ice&#x2F;.virtualenvs&#x2F;310&#x2F;lib&#x2F;python3.10&#x2F;site-packages&#x2F;pip&#x2F;_vendor&#x2F;init.py)"></a>fix ImportError: cannot import name ‘html5lib’ from ‘pip._vendor’ (&#x2F;home&#x2F;ice&#x2F;.virtualenvs&#x2F;310&#x2F;lib&#x2F;python3.10&#x2F;site-packages&#x2F;pip&#x2F;_vendor&#x2F;<strong>init</strong>.py)</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="bash-显示当前所在分支"><a href="#bash-显示当前所在分支" class="headerlink" title="bash 显示当前所在分支"></a>bash 显示当前所在分支</h4><p>在.bashrc文件追加如下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function git_branch &#123;</span><br><span class="line">   branch=&quot;`git branch 2&gt;/dev/null | grep &quot;^\*&quot; | sed -e &quot;s/^\*\ //&quot;`&quot;</span><br><span class="line">   if [ &quot;$&#123;branch&#125;&quot; != &quot;&quot; ];then</span><br><span class="line">       if [ &quot;$&#123;branch&#125;&quot; = &quot;(no branch)&quot; ];then</span><br><span class="line">           branch=&quot;(`git rev-parse --short HEAD`...)&quot;</span><br><span class="line">       fi</span><br><span class="line">       echo &quot; ($branch)&quot;</span><br><span class="line">   fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export PS1=&#x27;\u@\h \[\033[01;36m\]\w\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ &#x27;</span><br></pre></td></tr></table></figure>
-
-<h4 id="install-virtualbox"><a href="#install-virtualbox" class="headerlink" title="install virtualbox"></a>install virtualbox</h4><p><a target="_blank" rel="noopener" href="https://computingforgeeks.com/install-virtualbox-6-on-ubuntu-linux/">https://computingforgeeks.com/install-virtualbox-6-on-ubuntu-linux/</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># step 1</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt -y upgrade</span><br><span class="line">sudo reboot</span><br><span class="line"></span><br><span class="line"># step 2</span><br><span class="line">#Download</span><br><span class="line">curl https://www.virtualbox.org/download/oracle_vbox_2016.asc | gpg --dearmor &gt; oracle_vbox_2016.gpg</span><br><span class="line">curl https://www.virtualbox.org/download/oracle_vbox.asc | gpg --dearmor &gt; oracle_vbox.gpg</span><br><span class="line">#Install on system</span><br><span class="line">sudo install -o root -g root -m 644 oracle_vbox_2016.gpg /etc/apt/trusted.gpg.d/</span><br><span class="line">sudo install -o root -g root -m 644 oracle_vbox.gpg /etc/apt/trusted.gpg.d/</span><br><span class="line"></span><br><span class="line"># step 3</span><br><span class="line"># ubuntu 22.04 </span><br><span class="line">echo &quot;deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib&quot; | sudo tee /etc/apt/sources.list.d/virtualbox.list</span><br><span class="line"></span><br><span class="line"># Ubuntu 20.04/18.04:</span><br><span class="line">echo &quot;deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib&quot; | sudo tee /etc/apt/sources.list.d/virtualbox.list</span><br><span class="line"></span><br><span class="line"># step 4</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install linux-headers-$(uname -r) dkms</span><br><span class="line">sudo apt install virtualbox-6.1</span><br></pre></td></tr></table></figure>
-
-<p>virtualbox start error:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /sbin/vboxconfig </span><br><span class="line">[sudo] password for rcrozier:           </span><br><span class="line">vboxdrv.sh: Stopping VirtualBox services.</span><br><span class="line">vboxdrv.sh: Starting VirtualBox services.</span><br><span class="line">vboxdrv.sh: You must sign these kernel modules before using VirtualBox:</span><br><span class="line">  vboxdrv vboxnetflt vboxnetadp</span><br><span class="line">See the documenatation for your Linux distribution..</span><br><span class="line">vboxdrv.sh: Building VirtualBox kernel modules.</span><br><span class="line">debconf: DbDriver &quot;config&quot;: /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable</span><br><span class="line">vboxdrv.sh: Failed to enroll secure boot key..</span><br><span class="line">vboxdrv.sh: failed: modprobe vboxdrv failed. Please use &#x27;dmesg&#x27; to find out why.</span><br><span class="line"></span><br><span class="line">There were problems setting up VirtualBox.  To re-start the set-up process, run</span><br><span class="line">  /sbin/vboxconfig</span><br><span class="line">as root.  If your system is using EFI Secure Boot you may need to sign the</span><br><span class="line">kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) before you can load</span><br><span class="line">them. Please see your Linux system&#x27;s documentation for more information.</span><br></pre></td></tr></table></figure>
-
-<p>搜索了很多解决方案都无法处理，最后还是仔细看了报错信息，这里其实有一个很重要的提示信息<code>Secure Boot you may need to sign the kernel modules</code></p>
-<p>最后搜到<a target="_blank" rel="noopener" href="https://askubuntu.com/questions/900118/vboxdrv-sh-failed-modprobe-vboxdrv-failed-please-use-dmesg-to-find-out-why">https://askubuntu.com/questions/900118/vboxdrv-sh-failed-modprobe-vboxdrv-failed-please-use-dmesg-to-find-out-why</a> 这个答案最后的以解决答案：</p>
-<p>The above answer probably works fine, but if you want an easier time for it:</p>
-<p>I was able to solve it by</p>
-<p>booting into the BIOS and going &gt; advanced (f7) &gt; boot &gt; scroll down to “secure boot” &gt; change “Windows EUFI mode” to “other OS”</p>
-<p>My virtualbox works perfectly now.</p>
-<p>最后对于为为的解决方案就是进入BIOS系统之后，和这个答案每个硬件平台的BIOS版本会有所不同(我的硬件三HUAWEI MateBook X Pro 2022)找到”secure boot”关键词对应的默认直是enable，为改为disable，第一次修改没有其作用，是应推出的时候没有保存，第二次再修改选择save and exit，再进入ubuntu启动virtualbox就可以正常运作了。</p>
-<p>最近在ubuntu22.04 安装virtualbox的时候遇到另外还有一个报错：</p>
-<h3 id="vboxdrv-sh-failed-Cannot-change-group-vboxusers-for-device-dev-vboxdrv"><a href="#vboxdrv-sh-failed-Cannot-change-group-vboxusers-for-device-dev-vboxdrv" class="headerlink" title="vboxdrv.sh: failed: Cannot change group vboxusers for device &#x2F;dev&#x2F;vboxdrv."></a>vboxdrv.sh: failed: Cannot change group vboxusers for device &#x2F;dev&#x2F;vboxdrv.</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">执行：/sbin/vboxconfig</span><br><span class="line">输出如下报错</span><br><span class="line">root@ice:~# /sbin/vboxconfig</span><br><span class="line">vboxdrv.sh: Stopping VirtualBox services.</span><br><span class="line">vboxdrv.sh: Starting VirtualBox services.</span><br><span class="line">vboxdrv.sh: Building VirtualBox kernel modules.</span><br><span class="line">vboxdrv.sh: failed: Cannot change group vboxusers for device /dev/vboxdrv.</span><br><span class="line"></span><br><span class="line">There were problems setting up VirtualBox.  To re-start the set-up process, run</span><br><span class="line">  /sbin/vboxconfig</span><br><span class="line">as root.  If your system is using EFI Secure Boot you may need to sign the</span><br><span class="line">kernel modules (vboxdrv, vboxnetflt, vboxnetadp, vboxpci) before you can load</span><br><span class="line">them. Please see your Linux system&#x27;s documentation for more information.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>创建vboxusers group<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo groupadd vboxusers</span><br></pre></td></tr></table></figure></li>
-<li>把当前user 加入到这个group， 你替换这里的ice<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo usermod -a -G vboxusers ice</span><br></pre></td></tr></table></figure></li>
-<li>检查是否添加成功<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ grep vboxusers /etc/group</span><br><span class="line"># 输出为:</span><br><span class="line"># vboxusers:x:1003:ice</span><br></pre></td></tr></table></figure></li>
-<li>然后运行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /sbin/vboxconfig</span><br></pre></td></tr></table></figure></li>
-</ul>
+          <h3 id="我应该支持以色列还是巴勒斯坦？"><a href="#我应该支持以色列还是巴勒斯坦？" class="headerlink" title="我应该支持以色列还是巴勒斯坦？"></a>我应该支持以色列还是巴勒斯坦？</h3><p>这是我在quora上看到到一个高赞回答，粗浅翻译一下，重点是他来自以色列特拉维夫。<br>原文地址：<a target="_blank" rel="noopener" href="https://qr.ae/pKvZJk">https://qr.ae/pKvZJk</a><br>原文作者信息：<br>Sociology and Management from The Open UniversityGraduated 2015<br>Lives in Tel Aviv, Israel<br>863K content views258.7K this month<br>Joined November 2013</p>
+<p>I am an Israeli, and as an Israeli, I should, with a heavy heart, suggest you support the Palestinians. Why? Because, unlike Israel, they need your support.<br>我是以色列人，作为以色列人，我应该怀着沉重的心情建议你支持巴勒斯坦人。为什么？因为，与以色列不同，他们需要您的支持。</p>
+<p>I don’t want to talk about history. Both sides can provide good arguments as to why this piece of land is theirs by right. I don’t want to go into who’s responsible for the conflict - both sides will provide countless examples of the atrocities inflicted on them by the other side.<br>我不想谈论历史。双方都可以提供很好的论据来解释为什么这块土地理所当然地属于他们。我不想讨论谁对这场冲突负责——双方都会提供无数的例子来说明对方对他们施加的暴行。</p>
+<p>I want to talk about the here and now. The fact is that there are currently 9 million Israeli citizens (6 million of them are Jews) who live in a relative comfort: they can go, live and work wherever they want inside Israel. Israel is a democracy, so we’re free to elect and out-vote our leaders in case we don’t like how they manage our affairs. In addition, because Israel is a recognized member of the UN, an Israeli citizen is free to use their passport to travel and trade with the rest of the world.<br>我想谈谈此时此地。事实是，目前有 900 万以色列公民（其中 600 万是犹太人）生活相对舒适：他们可以在以色列境内任何想去的地方生活和工作。以色列是一个民主国家，因此，如果我们不喜欢他们管理我们事务的方式，我们可以自由地选举和否决我们的领导人。此外，由于以色列是联合国公认的成员，以色列公民可以自由使用其护照与世界其他地区旅行和贸易。</p>
+<p>The 5 million Palestinians living in Gaza and The West Bank, on the other hand, do not enjoy those freedoms. They practically live in an occupied territory which is governed by Israel, but was never officially annexed. That means they do not enjoy the rights of Israeli citizens (they are not citizens after all), but they are forced to live their lives based on decisions made by Israeli politicians and army generals. They cannot build houses or start new businesses outside their current cities, they have to get permits to work inside Israel or to travel abroad, and their borders are controlled by Israel, so they can’t import and export goods and cultivate a healthy economy. They are basically completely reliant on their Israeli occupiers. The Palestinians tried to revolt many times - either by force or in diplomatic manners. But all their attempts have failed miserably by the much stronger Israel.<br>另一方面，生活在加沙和西岸的 500 万巴勒斯坦人却无法享受这些自由。他们实际上生活在以色列管辖的被占领土上，但从未被正式吞并。这意味着他们不享有以色列公民的权利（他们毕竟不是公民），但他们被迫根据以色列政客和军队将军的决定而生活。他们不能在现有城市之外建造房屋或开办新企业，必须获得在以色列境内工作或出国旅行的许可，而且他们的边境由以色列控制，因此他们无法进出口货物并培育健康的经济。他们基本上完全依赖以色列占领者。巴勒斯坦人多次试图通过武力或外交方式进行反抗。但他们的所有尝试都因强大得多的以色列而惨遭失败。</p>
+<p>Ask the average Israeli about it, and they’ll tell you that the Palestinians have brought it onto themselves. Considering the horrible violence showed in the past by the Palestinians and the other Arabic countries - Israel would be crazy to give up on its right to defend itself. They may be right, but it doesn’t change the fact that there are 5 million people who are the citizens of no country and who live under occupation. I suspect that even if the Palestinians will promise to never use violence against it - Israel will never trust their word and give up on its control. Things will only change if people like you will support the Palestinians’ right to live like any other citizen in any other normal country in the world. It doesn’t mean you should support Palestinian violence though, but do support, and demand, their right to be free.<br>问问普通以色列人，他们会告诉你这是巴勒斯坦人自找的。考虑到巴勒斯坦人和其他阿拉伯国家过去所表现出的可怕暴力——以色列放弃自卫权将是疯狂的。他们也许是对的，但这并不能改变这样一个事实：有 500 万人不是任何国家的公民，生活在占领之下。我怀疑，即使巴勒斯坦人承诺永远不会对其使用暴力，以色列也永远不会相信他们的诺言并放弃对其的控制。只有像你们这样的人支持巴勒斯坦人像世界上任何其他正常国家的任何其他公民一样生活的权利，事情才会改变。但这并不意味着您应该支持巴勒斯坦暴力，而是支持并要求他们的自由权。</p>
+<p>So support Palestine. Otherwise, things will never change.<br>所以支持巴勒斯坦。否则，事情永远不会改变。</p>
+<p>Edit: Wow… I never thought this answer would attract so much attention. Thank you for all the upvotes, comments and shares. Still, I decided to block new comments for now. Whether you agreed with my opinion or not - most of you guys posted warm and respectful comments and I apologize for not being able to respond to all of them. Still, some of the readers out there decided it would be the best to express their disagreement by posting sarcastic, cynical or plain hateful comments which I got tired of reading at some point.<br>编辑：哇…我从没想过这个答案会引起如此多的关注。感谢大家的点赞、评论和分享。尽管如此，我还是决定暂时阻止新评论。无论您是否同意我的观点 - 你们中的大多数人都发表了热情而尊重的评论，对于无法回复所有评论，我深表歉意。尽管如此，一些读者还是认为最好通过发表讽刺、愤世嫉俗或纯粹的仇恨评论来表达他们的不同意见，而我在某些时候厌倦了阅读这些评论。</p>
 
       
     </div>
@@ -298,7 +271,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/46/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/">48</a><span class="space">&hellip;</span><a class="page-number" href="/page/89/">89</a><a class="extend next" rel="next" href="/page/48/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/46/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/">46</a><span class="page-number current">47</span><a class="page-number" href="/page/48/">48</a><span class="space">&hellip;</span><a class="page-number" href="/page/93/">93</a><a class="extend next" rel="next" href="/page/48/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -364,14 +337,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">89</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -427,12 +400,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">175k</span>
+    <span title="Symbols count total">183k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">10:38</span>
+    <span title="Reading time total">11:06</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>

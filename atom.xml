@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2024-07-16T03:28:22.053Z</updated>
+  <updated>2024-10-28T09:27:20.738Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -17,18 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Rust所有权系统：深入剖析</title>
+    <link href="https://tonymistark.github.io/2024/10/28/Rust-ownership-system-details/"/>
+    <id>https://tonymistark.github.io/2024/10/28/Rust-ownership-system-details/</id>
+    <published>2024-10-28T08:19:33.000Z</published>
+    <updated>2024-10-28T09:27:20.738Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Rust所有权系统：深入剖析&quot;&gt;&lt;a href=&quot;#Rust所有权系统：深入剖析&quot; class=&quot;headerlink&quot; title=&quot;Rust所有权系统：深入剖析&quot;&gt;&lt;/a&gt;Rust所有权系统：深入剖析&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>O(0)算法复杂度的终极目标：这个需求能不能不做？？？</title>
+    <link href="https://tonymistark.github.io/2024/09/22/tech_essay/O0/"/>
+    <id>https://tonymistark.github.io/2024/09/22/tech_essay/O0/</id>
+    <published>2024-09-22T03:55:26.000Z</published>
+    <updated>2024-10-28T09:32:13.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;算法复杂度(Algorithmic complexity) –</summary>
+        
+      
+    
+    
+    
+    <category term="tech_essay" scheme="https://tonymistark.github.io/categories/tech-essay/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Overloading And Overriding</title>
     <link href="https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/"/>
     <id>https://tonymistark.github.io/2024/07/16/notes/overloading-and-overriding/</id>
     <published>2024-07-16T03:20:09.000Z</published>
-    <updated>2024-07-16T03:28:22.053Z</updated>
+    <updated>2024-10-28T09:34:11.489Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;重载和重写在面向对象编程中有什么区别&quot;&gt;&lt;a href=&quot;#重载和重写在面向对象编程中有什么区别&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;Overloading-Or-Overriding-That-is-a-Question&quot;&gt;&lt;a href=&quot;#Overloading-Or-Overriding-That-is-a-Question&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -61,6 +105,52 @@
     
     
     <category term="algorithm" scheme="https://tonymistark.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>康威定律</title>
+    <link href="https://tonymistark.github.io/2024/04/27/tech_essay/ConwaysLaw/"/>
+    <id>https://tonymistark.github.io/2024/04/27/tech_essay/ConwaysLaw/</id>
+    <published>2024-04-27T09:46:50.000Z</published>
+    <updated>2024-10-28T09:32:13.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;几乎所有我所青睐的软件架构从业者都对这个领域的任何一种一般法则都深表怀疑。好的软件架构是非常特定于上下文的，分析在各种环境中以不同方式解决的权衡。但是，如果他们都同意一件事，那就是康威定律的重要性和力量。它足够重要，足以影响我遇到的每个系统，也足够强大，如果你试图对抗它，你</summary>
+        
+      
+    
+    
+    
+    <category term="tech_essay" scheme="https://tonymistark.github.io/categories/tech-essay/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>康威定律</title>
+    <link href="https://tonymistark.github.io/2024/04/27/design-pattern/ConwaysLaw/"/>
+    <id>https://tonymistark.github.io/2024/04/27/design-pattern/ConwaysLaw/</id>
+    <published>2024-04-27T09:43:21.000Z</published>
+    <updated>2024-10-28T09:32:13.802Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;几乎所有我所青睐的软件架构从业者都对这个领域的任何一种一般法则都深表怀疑。好的软件架构是非常特定于上下文的，分析在各种环境中以不同方式解决的权衡。但是，如果他们都同意一件事，那就是康威定律的重要性和力量。它足够重要，足以影响我遇到的每个系统，也足够强大，如果你试图对抗它，你</summary>
+        
+      
+    
+    
+    
+    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
+    
     
   </entry>
   
@@ -389,105 +479,6 @@
     
     <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Flyweight 享元模式</title>
-    <link href="https://tonymistark.github.io/2024/01/30/design-pattern/flyweight/"/>
-    <id>https://tonymistark.github.io/2024/01/30/design-pattern/flyweight/</id>
-    <published>2024-01-30T13:55:21.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Facade 门面（外观）模式</title>
-    <link href="https://tonymistark.github.io/2024/01/29/design-pattern/facade/"/>
-    <id>https://tonymistark.github.io/2024/01/29/design-pattern/facade/</id>
-    <published>2024-01-29T14:15:32.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;意图&quot;&gt;&lt;a href=&quot;#意图&quot; class=&quot;headerlink&quot; title=&quot;意图&quot;&gt;&lt;/a&gt;意图&lt;/h2&gt;&lt;p&gt;Facade是一种结构化设计模式，它为库、框架或任何其他复杂的类集提供了一个简化的接口。&lt;/p&gt;
-&lt;div align=&quot;center&quot;&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Decorator 装饰器模式</title>
-    <link href="https://tonymistark.github.io/2024/01/28/design-pattern/decorator/"/>
-    <id>https://tonymistark.github.io/2024/01/28/design-pattern/decorator/</id>
-    <published>2024-01-28T05:26:52.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Decorator-装饰器模式&quot;&gt;&lt;a href=&quot;#Decorator-装饰器模式&quot; class=&quot;headerlink&quot; title=&quot;Decorator 装饰器模式&quot;&gt;&lt;/a&gt;Decorator 装饰器模式&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Composite 部分-整体模式</title>
-    <link href="https://tonymistark.github.io/2023/12/07/design-pattern/composite/"/>
-    <id>https://tonymistark.github.io/2023/12/07/design-pattern/composite/</id>
-    <published>2023-12-07T13:52:43.000Z</published>
-    <updated>2024-04-29T03:33:27.917Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Composite-部分-整体模式&quot;&gt;&lt;a href=&quot;#Composite-部分-整体模式&quot; class=&quot;headerlink&quot; title=&quot;Composite 部分-整体模式&quot;&gt;&lt;/a&gt;Composite 部分-整体模式&lt;/h1&gt;&lt;p&gt;Also</summary>
-        
-      
-    
-    
-    
-    <category term="design-pattern" scheme="https://tonymistark.github.io/categories/design-pattern/"/>
-    
-    
-    <category term="Design Pattern" scheme="https://tonymistark.github.io/tags/Design-Pattern/"/>
     
   </entry>
   
