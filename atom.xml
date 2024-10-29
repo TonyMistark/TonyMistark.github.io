@@ -6,7 +6,7 @@
   <link href="https://tonymistark.github.io/atom.xml" rel="self"/>
   
   <link href="https://tonymistark.github.io/"/>
-  <updated>2024-10-28T11:04:04.367Z</updated>
+  <updated>2024-10-29T11:00:49.198Z</updated>
   <id>https://tonymistark.github.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/"/>
     <id>https://tonymistark.github.io/2024/10/28/python/notes/with_in_python/</id>
     <published>2024-10-28T10:49:46.000Z</published>
-    <updated>2024-10-28T11:04:04.367Z</updated>
+    <updated>2024-10-29T11:00:49.198Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;详解: python中的with&lt;br&gt;一、基本概念与语法结构&lt;br&gt;在Python中，with语句是一种用于简化资源管理的控制流语句，它的语法结构如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;h2 id=&quot;详解-python中的with&quot;&gt;&lt;a href=&quot;#详解-python中的with&quot; class=&quot;headerlink&quot; title=&quot;详解: python中的with&quot;&gt;&lt;/a&gt;详解:</summary>
         
       
     
