@@ -13,7 +13,7 @@ date: 2024-10-28 18:49:46
 with context_expression [as target(s)]: 
    ... with - body...
 ```
-其中，context_expression可以是任意表达式，它的结果应该是一个支持上下文管理协议（Context Management Protocol）的对象。as target(s)是可选的部分，如果存在，with语句执行时会将__enter__()方法的返回值绑定到as后面指定的目标（可以是一个或多个变量）。
+其中，context_expression可以是任意表达式，它的结果应该是一个支持上下文管理协议（Context Management Protocol）的对象。as target(s)是可选的部分，如果存在，with语句执行时会将`__enter__()`方法的返回值绑定到as后面指定的目标（可以是一个或多个变量）。
 
 例如，在文件操作中，我们经常这样使用with：
 ```python
@@ -23,7 +23,7 @@ with open('example.txt',  'r') as f:
 这里open('example.txt',  'r')就是context_expression，它返回一个文件对象（支持上下文管理协议），f就是as后面的目标变量，在with - body（这里是data = f.read() ）中就可以使用这个文件对象进行操作。
 
 二、支持的对象类型
-很多对象都可以支持with语句，只要它们实现了上下文管理协议，也就是定义了__enter__()和__exit__()方法。
+很多对象都可以支持with语句，只要它们实现了上下文管理协议，也就是定义了`__enter__()`和`__exit__()`方法。
 
 * 文件对象
 
@@ -68,12 +68,12 @@ class MyContextManager:
 with MyContextManager() as cm: 
     print('Inside the with block')
 ```
-在这个例子中，MyContextManager类定义了__enter__()和__exit__()方法，所以可以用于with语句。__enter__()方法在进入with块时被调用，__exit__()方法在退出with块时被调用，无论是否发生异常。
+在这个例子中，MyContextManager类定义了`__enter__()`和`__exit__()`方法，所以可以用于with语句。`__enter__()`方法在进入with块时被调用，`__exit__()`方法在退出with块时被调用，无论是否发生异常。
 
 ## Python with工作原理
 一、上下文管理协议的核心方法
-* __enter__()方法
-当执行with语句时，首先会调用context_expression所返回对象的__enter__()方法。这个方法的主要作用是进行一些初始化操作，并返回一个值（如果有as target(s)部分，这个值会被绑定到目标变量上）。例如在文件对象中，__enter__()方法可能会打开文件并返回文件对象本身。
+* `__enter__()`方法
+当执行with语句时，首先会调用context_expression所返回对象的`__enter__()`方法。这个方法的主要作用是进行一些初始化操作，并返回一个值（如果有as target(s)部分，这个值会被绑定到目标变量上）。例如在文件对象中，`__enter__()`方法可能会打开文件并返回文件对象本身。
 以一个自定义的上下文管理器类为例：
 ```python
 class MyContext: 
@@ -84,10 +84,11 @@ class MyContext:
         print('__exit__ method is called')
 with MyContext() as result: 
     print(result)
-在这个例子中，当执行with MyContext()时，__enter__()方法被调用，它打印出__enter__ method is called并返回This is the return value，这个返回值被绑定到result变量上，然后在with - body中打印出来。
-* __exit__()方法
-__exit__()方法在with - body执行完毕后被调用，无论with - body中的代码是正常执行完毕还是发生了异常。它有四个参数：exc_type（异常类型，如果没有异常则为None）、exc_value（异常值，如果没有异常则为None）、traceback（异常的追溯信息，如果没有异常则为None）。
-它的主要功能是进行一些清理操作，比如关闭文件、释放锁等。如果在__exit__()方法中返回True，那么with - body中发生的异常会被抑制，不会向上传播；如果返回False或者None（默认），异常会正常向上传播。例如：
+```
+在这个例子中，当执行with MyContext()时，`__enter__()`方法被调用，它打印出__enter__ method is called并返回This is the return value，这个返回值被绑定到result变量上，然后在with - body中打印出来。
+* `__exit__()`方法
+`__exit__()`方法在with - body执行完毕后被调用，无论with - body中的代码是正常执行完毕还是发生了异常。它有四个参数：exc_type（异常类型，如果没有异常则为None）、exc_value（异常值，如果没有异常则为None）、traceback（异常的追溯信息，如果没有异常则为None）。
+它的主要功能是进行一些清理操作，比如关闭文件、释放锁等。如果在`__exit__()`方法中返回True，那么with - body中发生的异常会被抑制，不会向上传播；如果返回False或者None（默认），异常会正常向上传播。例如：
 ```python
 class SuppressError: 
     def __enter__(self): 
@@ -99,7 +100,7 @@ class SuppressError:
 with SuppressError(): 
     1/0
 ```
-在这个例子中，__exit__()方法检查到发生了ZeroDivisionError异常（exc_type不为None），然后打印出抑制错误的信息并返回True，所以这个异常不会导致程序崩溃。
+在这个例子中，`__exit__()`方法检查到发生了ZeroDivisionError异常（exc_type不为None），然后打印出抑制错误的信息并返回True，所以这个异常不会导致程序崩溃。
 二、与try - finally的等价关系
 正常执行情况
 在语义上，with语句等价于一个包含try - finally结构的代码块。例如：
@@ -115,9 +116,9 @@ try:
 except: 
     pass
 ```
-当with - body正常执行时，__enter__()方法首先被调用，然后执行with - body中的代码，最后__exit__()方法被调用且传入的exc_type、exc_value、traceback都为None。
+当with - body正常执行时，`__enter__()`方法首先被调用，然后执行with - body中的代码，最后`__exit__()`方法被调用且传入的exc_type、exc_value、traceback都为None。
 * 发生异常情况
-如果在with - body中发生了异常，__exit__()方法会被调用，并且传入异常的类型、值和追溯信息。如果__exit__()方法返回True，异常被抑制，就好像在try - finally结构中在finally块中处理了异常并且不再向上传播；如果__exit__()方法返回False或者None，异常会像在普通的try - except结构中一样向上传播，由外部的异常处理机制来处理。例如：
+如果在with - body中发生了异常，`__exit__()`方法会被调用，并且传入异常的类型、值和追溯信息。如果`__exit__()`方法返回True，异常被抑制，就好像在try - finally结构中在finally块中处理了异常并且不再向上传播；如果`__exit__()`方法返回False或者None，异常会像在普通的try - except结构中一样向上传播，由外部的异常处理机制来处理。例如：
 ```python
 try: 
     context_manager = context_expression
@@ -163,7 +164,7 @@ finally:
 with open('output.txt',  'w') as f: 
     f.write('This  is a test.\n')
 ```
-这里，如果写入过程中出现问题（比如磁盘空间不足等），__exit__()方法会被调用，文件会被关闭，避免资源泄漏。
+这里，如果写入过程中出现问题（比如磁盘空间不足等），`__exit__()`方法会被调用，文件会被关闭，避免资源泄漏。
 二、数据库连接
 * 连接数据库并执行查询
 在使用数据库连接时，如sqlite3数据库，我们可以这样使用with语句：
@@ -176,7 +177,7 @@ with sqlite3.connect('example.db')  as conn:
     for row in results: 
         print(row)
 ```
-当with - body执行完毕后，数据库连接会被正确关闭，释放相关资源。如果在查询过程中发生异常（比如数据库文件损坏等），__exit__()方法也会被调用进行清理操作。
+当with - body执行完毕后，数据库连接会被正确关闭，释放相关资源。如果在查询过程中发生异常（比如数据库文件损坏等），`__exit__()`方法也会被调用进行清理操作。
 * 事务处理
 在数据库事务处理中，with语句也很有用。例如：
 ```python
@@ -258,7 +259,7 @@ with open('test.txt',  'r') as f:
 ```
 可以明显看出，with语句不需要显式地编写try和finally块，减少了代码的冗余。
 * 异常处理逻辑
-在try - finally中，如果想要在finally块中处理异常并根据情况决定是否重新抛出异常，逻辑会比较复杂。而在with语句中，通过__exit__()方法可以很方便地处理异常。例如：
+在try - finally中，如果想要在finally块中处理异常并根据情况决定是否重新抛出异常，逻辑会比较复杂。而在with语句中，通过`__exit__()`方法可以很方便地处理异常。例如：
 ```python
 class MyContext: 
     def __enter__(self): 
@@ -271,7 +272,7 @@ class MyContext:
 with MyContext(): 
     raise ValueError('This is an error')
 ```
-在这个with语句的例子中，__exit__()方法可以直接处理异常，而在try - finally中，需要在finally块中额外的逻辑来处理异常并决定是否重新抛出。
+在这个with语句的例子中，`__exit__()`方法可以直接处理异常，而在try - finally中，需要在finally块中额外的逻辑来处理异常并决定是否重新抛出。
 * 代码可读性
 with语句的代码可读性更高，因为它将资源管理和操作代码更加紧密地结合在一起。try - finally结构中，资源管理（finally块）和正常操作（try块）的代码是分开的，对于复杂的逻辑，可能会使代码的理解变得困难。例如在数据库连接的操作中，with语句使得连接的获取、操作和释放更加直观：
 ```python
@@ -307,9 +308,9 @@ def resource_heavy_function():
 ```
 如果使用装饰器来实现类似的资源管理，会更加复杂，需要更多的代码来处理资源的获取、释放和函数的执行逻辑。
 ## Python with错误处理方法
-一、__exit__()方法中的异常处理
+一、`__exit__()`方法中的异常处理
 接收异常信息
-当with - body中发生异常时，__exit__()方法会接收到异常的类型（exc_type）、异常的值（exc_value）和异常的追溯信息（traceback）。例如：
+当with - body中发生异常时，`__exit__()`方法会接收到异常的类型（exc_type）、异常的值（exc_value）和异常的追溯信息（traceback）。例如：
 ```python
 class ErrorHandler: 
     def __enter__(self): 
