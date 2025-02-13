@@ -15,8 +15,32 @@
     <atom:link href="https://tonymistark.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>安静地坐着学习</description>
-    <pubDate>Wed, 30 Oct 2024 06:55:47 GMT</pubDate>
+    <pubDate>Thu, 13 Feb 2025 09:53:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Lua 简单入门教程</title>
+      <link>https://tonymistark.github.io/2025/02/13/simple_lua_tutorial/</link>
+      <guid>https://tonymistark.github.io/2025/02/13/simple_lua_tutorial/</guid>
+      <pubDate>Thu, 13 Feb 2025 09:49:57 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Lua 是一种轻量级、高效、可嵌入的脚本语言，广泛应用于游戏开发（如《魔兽世界》、《愤怒的小鸟》）、嵌入式系统和其他需要脚本扩展的场景。以下是一个 Lua 的入门教程，帮助你快速掌握 Lua 的基础知识。&lt;/p&gt;
+&lt;h2 id=&quot;1-Lua-环境搭建&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://tonymistark.github.io/2025/02/13/simple_lua_tutorial/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>详解：python中的with</title>
@@ -495,32 +519,6 @@
       
       
       <comments>https://tonymistark.github.io/2024/02/03/design-pattern/chain-of-responsibility/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Structural Design Patterns 结构设计模式</title>
-      <link>https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/</link>
-      <guid>https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/</guid>
-      <pubDate>Thu, 01 Feb 2024 14:27:04 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;结构设计模式解释了如何将对象和类组装成更大的结构，同时保持这些结构的灵活性和效率。&lt;/p&gt;
-&lt;h1 id=&quot;Adapter-适配器&quot;&gt;&lt;a href=&quot;#Adapter-适配器&quot; class=&quot;headerlink&quot; title=&quot;Adapter</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://tonymistark.github.io/categories/design-pattern/">design-pattern</category>
-      
-      
-      
-      <comments>https://tonymistark.github.io/2024/02/01/design-pattern/structural-patterns/#disqus_thread</comments>
       
     </item>
     
